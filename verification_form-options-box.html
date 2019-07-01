@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Verificacion de multiples opciones</title>
+</head>
+<body>
+	<form name="formulario" id="formulario" >Escoja un tipo de opcion:
+<select name="edad">
+<option value="opcion1" selected>opcion1</option>
+<option value="opcion2">opcion2</option>
+<option value="opcion3">opcion3</option>
+ <option value="opcion4">opcion4</option>
+
+</select>
+</form>
+
+<br>
+<a href="javascript:Mostrar()">Ver valores</a>
+
+<script type="text/javascript">
+	function Mostrar(boton)
+{
+msg=+formulario.edad.length+"\n";
+msg+=formulario.edad.length;
+[formulario.edad.selectedIndex].value+"\n";
+console.log(Mostrar);
+ 
+
+if(formulario.edad.length != formulario.edad.length){
+ console.log("Edadmedia");
+ }else{
+  console.log("ead");
+ }
+}
+
+
+
+</script>
+</body>
+</html>

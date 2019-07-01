@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JAVA</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	var Pedro = 1.46;
+	var Juan = 1.78;
+	var Ana  = 1.92;
+
+	var campo1 = parseInt(Pedro) + parseInt(Juan);
+	console.log(campo1); // 2 (suma solo parte entera)
+
+	var suma = Pedro+Juan+Ana;
+	console.log(suma); // 5.16
+
+	// Metodo prompt para encuesta de usuario 
+	// usuario
+	var user_prompt = prompt("Identifiquese con sus User"); // variable clase prompt 
+	name_user = String(user_prompt); // nueva String en la cual se almacena la variable User_prompt
+
+	// Nombre completo
+	var name_prompt = prompt("Identifiquese con su Nombre Completo");
+	name_name = String(name_prompt);
+
+	// Email 
+	var email_prompt = prompt("Identifiquese con su correo electronico");
+	email_name = String(email_prompt);
+
+	// Password 
+	var password_prompt = prompt("Identifiquese con su password");
+	password_name = String(password_prompt)
+
+document.write(name_user + "<br>" + name_name + "<br>" + email_name + "<br>" + password_name + "<br>" + "<br>");
+
+// Secuencia de pruebad de if con Metodo de encuesta
+
+// name_user
+
+if (name_user !=  name_name && name_user !=  email_name && name_user !=  password_name) {
+	alert("Correcto: Datos diferentes");
+	console.log("Todos los datos son correctos por lo tanto se envian los datos");
+
+}else if (name_user ==  name_name && name_user ==  email_name && name_user ==  password_name) {
+	alert("Error: Mismo valor de datos");
+	console.log("Todos los datos son iguales por lo tanto no se envian los datos");
+
+}else if (name_user <  name_name && name_user <  email_name && name_user <  password_name) {
+	for(var i = 0;i>500;i++){
+		alert("Error");
+
+/* 
+	Hacer las siguientes conversiones de longitud  (KM HM DAM M DC CM MM)
+		- 2.34 cm a mm
+		- 23312.13 km a m
+		- 321.312 dam a mm
+		- 210.908 m a km
+*/ 
+
+var conver_01 = 2.34;
+var conver_02 = 23312.13;
+var conver_03 = 321.312; 
+var conver_04 = 210.908; 
+
+var conver_01_Comp = conver_01*10;
+var conver_02_Comp = conver_02*1000;
+var conver_03_Comp = conver_03*1000;
+var conver_04_Comp = conver_04/1000;
+ 
+document.write("El resultado de las conversiones es el siguiente:" + " " + "<br>" + conver_01_Comp + " " + "<br>" + conver_02_Comp + " " + "<br>" + conver_03_Comp + " " + "<br>"  + conver_04_Comp);
+
+
+	// Introducir numero con prompt y luego multiplicarlo por 2	
+
+	var Quest_prompt_Num = prompt("Digite un numero");
+	Request_Prompt = String(Quest_prompt_Num);
+	alert(Request_Prompt*Request_Prompt);
+
+
+
+</script>
+</body>
+</html>
+
+

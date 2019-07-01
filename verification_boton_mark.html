@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Verificacion de chexboxes</title>
+</head>
+<body>
+	<form name="formulario" id="formulario">
+ 
+<input type="radio" name="edad" value="A"> opcion1<br>
+<input type="radio" name="edad" value=B>opcion2<br>
+<input type="radio" name="edad" value="C"> opcion3<br>
+</form>
+
+<a href="javascript:Mostrar()">Ver valores</a>
+
+	<script type="text/javascript">
+		function Mostrar()
+{
+msg="Elementos:" + formulario.edad.length+"\n";
+msg+="Opcion1: "+formulario.edad[0].checked+"\n";
+msg+="Opcion2 "+formulario.edad[1].checked+"\n";
+msg+="Opcion3 "+formulario.edad[2].checked+"\n";
+console.log(msg);
+}
+
+function salud(){
+var activid = document.getElementsByName("edad1");
+var activid2 = document.getElementsByName("edad");
+ 
+ if(activid2==activid){
+    console.log("sumatoria");
+ }else{
+  console.log("sumatoria2");
+ }
+ 
+}
+
+	</script>
+
+</body>
+</html>

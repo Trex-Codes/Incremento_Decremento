@@ -1,0 +1,102 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>example</title>
+	<style type="text/css">
+		#rot{
+			background-color: red;
+			border: 1px solid rgba(87,24,98);
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+// almacenar dato de promptm, monstrarlo en consola y multiplicarlo *2 
+
+var quest = prompt("Digite un dato double");
+resquest_quest =  String(quest);
+console.log(resquest_quest);
+console.log(resquest_quest*2);
+
+
+/* Dependiendo de la nota introducida, defina en que estado queda
+		1.0 - 5.9 = bajo
+		6.0 - 7.5 = basico
+		7-6 - 8.5 = alto	
+		8.6 - 10.0 = superior
+        */
+
+        	// declara viarables y guarda dato de prompt en un String 
+        	var not = prompt("Digite la nota corespondiente"); 
+        	bac_not = String(not);
+
+        	console.log("Su nota es: " + bac_not); // dice el valor de la nota
+
+        	if(bac_not>0 && bac_not<5.9){ //  Bajo
+        		console.log("Bajo");
+        	}else if (bac_not>5.9 && bac_not<7.5) { // Basico
+        		console.log("Basico");
+        	}else if (bac_not>7.5 && bac_not<8.5) { // Alto
+        		console.log("Alto");
+        	}else if (bac_not>8.6 && bac_not<10.0) { // Superior
+        		console.log("Superior");
+        	}else if (bac_not != 10.0) { // Dato difente de 1 0 10
+        		console.log("solo datos double del 1 al 10")
+        	}
+
+		// programa que digite 3 notas y sumarlas, luego sacar el porcentaje de las 3 notas
+
+		alert("INTRODUZCA SUS NOTAS Y SACARA EL PROMEDIO DE LAS MISMAS");
+		
+		var One_porcet = prompt("Digite la primera nota"); // nota 01 
+		one_netor = String(One_porcet);
+		document.write("Su primera nota es: " + one_netor + "<BR>");
+
+		var Second_porcet = prompt("Digite la segunda nota"); // nota 02
+		second_netor = String(One_porcet);
+		document.write("Su segunda nota es: " + second_netor + "<BR>");
+
+
+		var Third_porcet = prompt("Digite la tercera nota"); // nota 03
+		Third_netor = String(Third_porcet);
+		document.write("Su tercera nota es: " + Third_netor + "<BR>");
+
+		var suma_not = one_netor+second_netor+Third_netor/3;
+		document.write("el promedio de las 3 notas es: " + suma_not);
+
+		// Halle el el area del triangulo con datos por el cliente 
+
+		alert("Programa que halla el area del triangulo");
+
+		var rot_quest_base = prompt("Digite el base del triangulo");
+		cade_base =  String(rot_quest_base);
+
+		var rot_quest_altura = prompt("Digite la altura del trinagulo");
+		cade_altura = String(rot_quest_altura);
+
+		var base_triang = rot_quest_altura*rot_quest_base/2;
+		console.log(base_triang);
+
+// vereifique si el alumno aprueba o desaprueba la materia
+
+	var nota; 
+			var nombre;
+
+			nombre = prompt("Inidique su nombre");
+			nota = prompt("Indique su nota");
+			if(nota >= 6){
+				document.write(nombre + " " + "ha aprobado con:" + nota);
+			}else{
+				document.write(nombre + " " + "ha perdido la materia con: " + nota);
+			}
+
+
+
+
+
+
+		
+	</script>	
+</body>
+</html>
