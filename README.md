@@ -1,7 +1,12 @@
 # incremento_descremento
 # Incremento_Descremento (Mini proyects JS-HTML)
 
-> Multi-personal projects available based on `HTML-CSS-JS` languages:  
+## Starting 🚀
+_This documentation contains the repository practice [**0.8-Documentation FULLSTACK**](https://github.com/juan1305/0.8-Documentation-_FULLSTACK)_
+_Its main use is to document the topics learned during the study of developed problems_
+
+## Deployment 📦
+_Multi-personal projects available based on `HTML-CSS-JS` languages:
 - 1.0 Forms $3names and calls with 'Hi! + $'.html
 - 10.0 Forms Get values with HTML-JS.html
 - 11.0 stack Table create with forms values.html
@@ -48,12 +53,11 @@
 - web_site_DOM_nodos.html
 - while_loop-numbers.js
 
-# Use
-> This documentation contains the repository practice [**0.8-Documentation FULLSTACK**](https://github.com/juan1305/0.8-Documentation-_FULLSTACK)
-> Its main use is to document the topics learned during the study of developed problems 
+## Author(s) ✒️
+ - Juan Giraldo - Inical Work, Documentation Trex_Codes
 
-Contributions
-Contributions will be alone for me, since the repository will have no input from another programmer, any contribution, comment or suggestion can do it to the mail juan.13JSG@gmail.com Contributions will be alone for me, since the repository will have no input from another programmer, any contribution, comment or suggestion can do it to the mail juan.13JSG@gmail.com 💬
+## Contributions 🖇️
+contributions are open to all types of developer, whether to improve the quality of the code or improve its logic, any contribution is free and some suggestion or problem through comments 💬
 
-# License
-This project is MIT licensed, as found in the LICENSE file.
+## License 📄
+_This project is MIT licensed, as found in the LICENSE file. you can look at it en_ [LICENSE.md](https://github.com/juan1305/0.11-incremento_decremento/blob/master/LICENSE)
