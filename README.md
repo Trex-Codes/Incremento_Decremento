@@ -54,7 +54,7 @@ _Multi-personal projects available based on `HTML-CSS-JS` languages:
 - while_loop-numbers.js
 
 ## Author(s) ✒️
- - Juan Giraldo - Inical Work, Documentation Trex_Codes
+ - Juan Giraldo - Inical Work, Documentation [Trex_Codes](https://github.com/juan1305)
 
 ## Contributions 🖇️
 contributions are open to all types of developer, whether to improve the quality of the code or improve its logic, any contribution is free and some suggestion or problem through comments 💬
