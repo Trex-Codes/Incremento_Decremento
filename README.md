@@ -6,7 +6,7 @@ _This documentation contains the repository practice [**0.8-Documentation FULLST
 _Its main use is to document the topics learned during the study of developed problems_
 
 ## Deployment 📦
-_Multi-personal projects available based on `HTML-CSS-JS` languages:
+_Multi-personal projects available based on `HTML-CSS-JS` languages_:
 - 1.0 Forms $3names and calls with 'Hi! + $'.html
 - 10.0 Forms Get values with HTML-JS.html
 - 11.0 stack Table create with forms values.html
@@ -54,7 +54,7 @@ _Multi-personal projects available based on `HTML-CSS-JS` languages:
 - while_loop-numbers.js
 
 ## Author(s) ✒️
- - Juan Giraldo - Inical Work, Documentation [Trex_Codes](https://github.com/juan1305)
+ - **Juan Giraldo** - _initial Work, Documentation_ - [Trex_Codes](https://github.com/juan1305)
 
 ## Contributions 🖇️
 contributions are open to all types of developer, whether to improve the quality of the code or improve its logic, any contribution is free and some suggestion or problem through comments 💬
