@@ -1,4 +1,4 @@
-# incremento_descremento
+# 0.6-incremento_decremento
 # Incremento_Descremento (Mini proyects JS-HTML)
 
 ## Starting 🚀
