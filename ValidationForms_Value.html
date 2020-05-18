@@ -1,0 +1,284 @@
+
+<!-- saved from url=(0071)file:///C:/Users/juansebastian/Downloads/cls/FormInvalid_ValidData.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>HTML Pseudo clases</title>
+	<style type="text/css">
+		body{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+		background-color: #ECEFF1;
+	}
+
+label{
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #B0BEC5;
+		margin-bottom: 10px;
+}
+
+input{
+	width: 100%;
+	padding: 10px;
+	outline: 0;
+	border: 2px solid #B0BEC5;
+}
+
+
+input:invalid{
+	border-color: red;
+}
+
+#form{
+	max-width: 300px;
+	margin-top: 60px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	position: relative;
+	padding-top: 80px;
+}
+
+#ButtonSub{
+	width: 100%;
+	padding: 10px;
+	outline: 0;
+	border: 2px solid #B0BEC5;
+}
+
+
+#divValues{
+	width: 275px;
+	padding: 10px;
+	background-color: lightblue;
+	border: 2px solid #B0BEC5;
+	position: relative;
+	margin-top: 30px;
+}
+	</style>
+</head>
+<body>
+		<form action="file:///C:/Users/juansebastian/Downloads/cls/FormInvalid_ValidData.html" method="" id="Form">
+			
+			<article id="input1">
+				<label class="labelone">USERNAME</label>
+					<input id="formUser" type="text" placeholder="Username" pattern="[A-z]5,10}" title="Caracteres Mayusculas o minusculas (min 5 - max 10)" required=""><br><br>
+			<div id="notify1" style="display: none;"></div></article>
+
+			<article id="input2">
+				<label class="labeltwo">EMAIL</label>
+					<input id="formEmail" type="email" placeholder="Email" required=""><br><br>
+			<div id="notify2" style="display: none;"></div></article>
+			
+			<article id="input3">
+			<label>PASSWORD</label>
+				<input id="formPasword" type="password" placeholder="Password" pattern="[A-z]{8,16}" title="Caracteres Mayusucla o minusculas (min-8, max 10)" required=""><br><br>
+			<div id="notify3" style="display: block; background: red; padding: 15px;" class="error">* Password Incorrect parameters</div></article>
+
+		<article id="input4">
+			<label>CODE</label>
+				<input id="formCode" type="number" min="0" max="100" placeholder="code" title="Rango (1-100)" required=""><br><br>
+		<div id="notify4" style="display: block; background: red; padding: 15px;" class="error">* Email Incorrect parameters</div></article>
+		
+			<button id="ButtonSub" value="Submit" onclick="startTupData()">Submit</button>
+
+		<div id="divValues"><p id="getInput1">234</p><p id="getInput2">wer@gmail.com</p><p id="getInput3">3r4</p><p id="getInput4">23</p></div></form>
+
+		
+		
+		
+		
+
+	<script type="text/javascript">
+
+			// call <form> 
+			const form_HTML = document.getElementById('Form');
+
+			// call input username
+			const inputUser = document.getElementById('formUser');
+
+			// call article input1
+			const articleinputone 	= document.getElementById('input1'); // first DOM
+
+			// Create div to username
+			const divUser 	= document.createElement('div');
+
+/*			# Crear const con object(document.createElement()); y agregar textContent al div:
+			const divUserText 		= document.createTextNode('* Username Incorrect parameters');
+			divUser.append(divUserText); */	
+			divUser.id 				= 'notify1';
+			divUser.style.display 	= 'none';
+			articleinputone.appendChild(divUser);
+
+
+			// create event input username
+			inputUser.addEventListener('invalid', function(event){
+				event.preventDefault();
+				if(! event.target.validity.valid ){
+					divUser.textContent 		= '* Username Incorrect parameters';
+					divUser.className 			= 'error';
+					divUser.style.display		= 'block';
+					divUser.style.background 	= 'red';
+					divUser.style.padding 		= '15px';
+
+					inputUser.className 	= 'Invaid animated shakeded';
+				}
+			});
+
+		
+			// ***************************************************
+
+			// call input Email
+			const inputEmail = document.getElementById('formEmail');
+
+			// call article input2
+			const articleinputwo  = document.getElementById('input2'); // First DOM
+
+			// create div to username
+			const divEmail 	 		= document.createElement('div');
+			divEmail.id 			= 'notify2';
+			divEmail.style.display 	= 'none';
+			articleinputwo.appendChild(divEmail);
+
+			// Create event input Email
+			inputEmail.addEventListener('invalid', function(event2){
+				event2.preventDefault();
+				if( ! event2.target.validity.valid ){
+					divEmail.textContent 		= '* Email Incorrect parameters';
+					divEmail.className 			= 'error';
+					divEmail.style.display 		= 'block';
+					divEmail.style.background 	= 'red';
+					divEmail.style.padding 		= '15px';
+
+					inputEmail.className  = 'Invalid animated shakeded';
+				}
+			});
+
+			// ***************************************************
+
+
+			// call input Password
+			const inputPassword = document.getElementById('formPasword');
+
+			// call article input3 
+			const articleinputree = document.getElementById('input3') // First DOM
+
+			// create div to username
+			const divPassword 			= document.createElement('div');
+			divPassword.id 				= 'notify3';
+			divPassword.style.display 	= 'none';
+			articleinputree.appendChild(divPassword);
+
+			// Create event input Password
+			inputPassword.addEventListener('invalid', function(event3){
+				event3.preventDefault();
+				if( ! event3.target.validity.valid ){
+					divPassword.textContent 		= '* Password Incorrect parameters';
+					divPassword.className 			= 'error';
+					divPassword.style.display 		= 'block';
+					divPassword.style.background 	= 'red';
+					divPassword.style.padding 		= '15px';
+				}	
+			});
+
+			// ***************************************************
+
+
+			// call input Code 
+			const inputCode = document.getElementById('formCode');
+
+			// call article input2
+			const articleinputfour = document.getElementById('input4');
+
+			// create div to Password
+			const divCode 				= document.createElement('div');
+			divCode.id 					= 'notify4';
+			divCode.style.display 		= 'block';
+			articleinputfour.appendChild(divCode);
+
+			// Create event input Email
+			inputPassword.addEventListener('invalid', function(event4){
+				if( ! event4.target.validity.valid ){
+					divCode.textContent 		= '* Email Incorrect parameters';
+					divCode.className 			= 'error';
+					divCode.style.display 		= 'block';
+					divCode.style.background 	= 'red';
+					divCode.style.padding 		= '15px';
+				}
+			});
+
+	var s = 0;
+	function startTupData(){
+		const ls = document.getElementById('ButtonSub');
+			console.log(s++);
+
+		if(s==2){
+			alert('solo 1 ventana por mensaje');
+			// Reload the current page without the browser cache
+			window.location.reload(true);
+		
+		}
+// ****************************************
+
+	// CREATE DIV  que contiene info digitada por user
+	const diValue = document.createElement('div');
+	diValue.id = 'divValues';
+	// diValue.style.background 		= 'red';
+	// diValue.style.width 			= '100%';
+	// diValue.style.height 			= '140px';
+	// // diValue.style.padding 		= '10px'; 
+	// diValue.style.border 			= '1px solid grey';
+	form_HTML.appendChild(diValue); 
+
+	// const form_HTML = document.getElementById('Form');
+
+
+	// OBJECT que obtiene valores de cada form y los imprime por # de cada <p>
+
+	// const getOne = document.getElementById('getInput1').innerHTML = inputUser.value;
+	const getOne = document.getElementById('getInput1');
+	getOne.textContent = inputUser.value;
+	form_HTML.appendChild(getOne);
+	diValue.appendChild(getOne);
+
+	// const get2 = document.getElementById('getInput2').innerHTML = inputEmail.value;
+	const getTwo = document.getElementById('getInput2')
+	getTwo.textContent = inputEmail.value;
+	form_HTML.appendChild(getTwo);
+	diValue.appendChild(getTwo);
+
+	// const get3 = document.getElementById('getInput3').innerHTML = inputPassword.value;
+	const geThree = document.getElementById('getInput3');
+	geThree.textContent = inputPassword.value;
+	form_HTML.appendChild(geThree);
+	diValue.appendChild(geThree);
+
+	// const get4 =document.getElementById('getInput4').innerHTML = inputCode.value;
+	const getFour = document.getElementById('getInput4')
+	getFour.textContent = inputCode.value;
+	form_HTML.appendChild(getFour);
+	diValue.appendChild(getFour);
+	
+
+
+			console.log(inputUser.value); // valor form1 
+			console.log(inputEmail.value); // valor form2 
+			console.log(inputPassword.value); // valor form3 
+			console.log(inputCode.value); // valor form4
+
+}
+
+function callBack(){
+	const diVerror = document.createElement('div');
+	diVerror.id = 'divEror';
+	diVerror.style.background 		= 'red';
+	diVerror.style.width 			= '100%';
+	diVerror.style.height 			= '140px';
+	// diVerror.style.padding 		= '10px'; 
+	diVerror.style.border 			= '1px solid grey';
+	form_HTML.appendChild(diVerror); 
+}
+
+
+</script>
+
+</body></html>
