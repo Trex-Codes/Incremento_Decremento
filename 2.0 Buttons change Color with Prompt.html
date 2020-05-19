@@ -1,0 +1,202 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Button change Color</title>
+	<meta name="author" content="Trex_codes">
+	<meta name="description" content="buttons change color">
+	<meta name="keywords" content="Trex_codes">
+  	<style type="text/css">
+  
+  /**{
+	margin: 0 auto;
+    padding: 0;
+}*/
+
+button{
+	padding: 10px 10px;
+	position: relative;
+	margin: 5vh 3vw;
+	border: none;
+}
+
+#title_h1{
+	text-align: center;
+}
+
+#btn_1:hover{
+	background-color: red;
+}     
+
+#btn_2:hover{
+	background-color: blue;
+}
+
+#btn_3:hover{
+	background-color: green;
+}
+
+#btn_4:hover{
+	background-color: yellow;
+}
+
+#btn_5:hover{
+	background-color: aqua;
+}
+
+#btn_6:hover{
+	background-color: lightgreen;
+}
+
+      
+  </style>
+
+</head>
+<body>
+	<h1 id="title_h1">First page about buttons, in Windows 95</h1><br>
+	<button id="btn_1">Background red</button>
+	<button id="btn_2">Background blue</button>
+	<button id="btn_3">Background green</button>
+	<button id="btn_4">Background yellow</button>
+	<button id="btn_5">Background aqua</button>
+	<button id="btn_6">Background lightgreen</button><br>
+
+	<!-- Button refesh or valor initial -->
+	<button id="initial_var">Refresh</button>
+  
+  <script>
+
+// VARIABLES CON PROMPT DONDE USER DIGITA COLORES
+var co1 = prompt('color 01');
+var co2 = prompt('color 02');
+var co3 = prompt('color 03');
+var co4 = prompt('color 04');
+var co5 = prompt('color 05');
+var co6 = prompt('color 06'); 
+
+// OBJECT con colores indicados por el User
+colors = {
+	color1 : co1, // var co1 = "COLOR RED";
+	color2 : co2, // var co2 = 'COLOR BLUE';
+	color3 : co3, // var co3 = 'COLOR GREEN';
+	color4 : co4, // var co4 = 'COLOR YELLOW';
+	color5 : co5, // var co5 = 'COLOR AQUA';
+	color6 : co6, // var co6 = 'COLOR LIGHTGREEN';
+}
+
+// cambiar el color de los botones por el digitado por el user
+
+	// boton1 
+	const call1 = document.getElementById('btn_1');
+	call1.style.background = colors.color1; // cambia background del button
+	call1.innerText  = colors.color1; // cambia texto
+	// document.body.style.background = colors.color1;
+
+	let callme1 = document.getElementById('btn_1').onclick = function(){
+		document.body.style.background = colors.color1;
+	}
+
+	// botton2
+	const call2 = document.getElementById('btn_2');
+	call2.style.background = colors.color2;
+	call2.innerText = colors.color2;
+
+	let callme2 = document.getElementById('btn_2').onclick = function(){
+		document.body.style.background = colors.color2;
+	}
+
+	// boton3
+	const call3 = document.getElementById('btn_3');
+	call3.style.background = colors.color3;
+	call3.innerText = colors.color3;
+
+	let callme3 = document.getElementById('btn_3').onclick = function(){
+		document.body.style.background = colors.color3;
+	}
+
+	// boton4
+	const call4 = document.getElementById('btn_4');
+	call4.style.background = colors.color4;
+	call4.innerText = colors.color4;
+
+	let callme4 = document.getElementById('btn_4').onclick = function(){
+		document.body.style.background = colors.color4;
+	}
+
+	// boton5
+	const call5 = document.getElementById('btn_5');
+	call5.style.background = colors.color5;
+	call5.innerText = colors.color5;
+
+	let callme5 = document.getElementById('btn_5').onclick = function(){
+		document.body.style.background = colors.color5;
+	}
+
+	// boton6
+	const call6 = document.getElementById('btn_6');
+	call6.style.background = colors.color6;
+	call6.innerText = colors.color6;
+
+	let callme6 = document.getElementById('btn_6').onclick = function(){
+		document.body.style.background = colors.color6;
+	}
+
+
+	// Button refesh or valor initial
+	let buttonInit = document.getElementById('initial_var');
+	buttonInit.onclick = function(){
+		document.body.style.background = 'initial';
+	}
+
+
+	cls = 
+	`
+		***********************************
+		*	LETTERS:                	  
+		*	A = COLOR ${colors.color1}		
+		*	B = COLOR ${colors.color2}        
+		*	C = COLOR ${colors.color3}  
+		*	D = COLOR ${colors.color4}  
+		*	E = COLOR ${colors.color5} 	
+		*	F = COLOR ${colors.color6} 	
+		***********************************
+		` 
+	console.log(cls);
+
+
+/*
+    document.getElementById('btn_1').onclick = function(){
+    	// document.getElementsByTagName('body').style.background-color = 'colors.color1';	
+    	document.body.style.background = colors.color1;
+    	console.log(`Fondo de color ${colors.color1}`);
+    }
+    document.getElementById('btn_2').onclick = function(){
+    	document.body.style.background = 'blue';
+    	console.log('Fondo de color blue');
+    }
+    document.getElementById('btn_3').onclick = function(){
+    	document.body.style.background = 'green';
+    	console.log('Fondo de color green');
+    }
+    document.getElementById('btn_4').onclick = function(){
+    	document.body.style.background = 'yellow';
+    	console.log('Fondo de color yellow');
+    }
+    document.getElementById('btn_5').onclick = function(){
+    	document.body.style.background = 'aqua';
+    	console.log('Fondo de color aqua');
+    }
+    document.getElementById('btn_6').onclick = function(){
+    	document.body.style.background = 'lightgreen';
+    	console.log('Fondo de color lightgreen');
+    }*/
+    
+    
+
+
+    
+    
+    
+  </script>
+
+</body>
+</html>

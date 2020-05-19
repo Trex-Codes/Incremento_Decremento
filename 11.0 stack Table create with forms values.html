@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>StackOverflow</title>
+	<style type="text/css"> table{
+            border-collapse: collapse;
+        }
+        table, td, th {
+            border: 2px solid orange;
+            padding:20px;
+        }
+        button{
+            color:white;
+            font-weight:bold;
+            background-color:orange;
+            width:100px;
+            height:25px;
+            font-size:15px;
+        }</style>
+</head>
+<body>
+	<input id="nomb" style="margin:10px" type="text"><br><br>
+        Categoria:<input id="cat" style="margin:4px" type="text"><br><br>
+        Precio: <input id="precio" style="margin:20px" type="text"><br><br>
+        Stock: <input id="stock" style="margin:25px" type="text"><br><br>
+        <button id="btn_guardar" onclick="guardar();">Guardar</button><br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody id="tablita">
+
+            </tbody>
+        </table>
+        <script type="text/javascript">
+        	function guardar(){
+   
+    var _nom = document.getElementById("nomb").value;
+    var _cat = document.getElementById("cat").value;
+    var _precio = document.getElementById("precio").value;
+    var _stock = document.getElementById("stock").value;
+
+    var fila="<tr><td>"+_nom+"</td><td>"+_cat+"</td><td>"+_precio+"</td><td>"+_stock+"</td></tr>";
+
+    var btn = document.createElement("TR");
+   	btn.innerHTML=fila;
+    document.getElementById("tablita").appendChild(btn);
+}
+        </script>
+</body>
+</html>

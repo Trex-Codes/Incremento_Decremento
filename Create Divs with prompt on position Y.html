@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Create Divs with prompt on position Y</title>
+</head>
+<body id="body">
+		
+	<script type="text/javascript">
+
+			let quest_backColor = prompt('Digite el fondo del Div');
+			let quest_Height = prompt('Digite la altura');
+			let quest_Width = prompt('Digite el ancho');
+
+			const questions_Fictures = {
+				'backgroundColor': quest_backColor,
+				'height': quest_Height,
+				'width': quest_Width,
+			}
+
+		document.getElementById('body').onmousedown = function (){
+				const divCreate = document.createElement('div');
+
+				divCreate.style.backgroundColor = quest_backColor;
+				divCreate.style.height = quest_Height;
+				divCreate.style.width  = quest_Width;
+			
+				document.body.appendChild(divCreate);
+			}
+
+
+	</script>
+</body>
+</html>

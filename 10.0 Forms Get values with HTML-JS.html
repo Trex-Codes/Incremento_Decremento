@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Questions Quiz Proyect</title>
+	<meta name="author" content="Trex_Codes">
+	<meta name="description" content="The Website about Questions Quiz Proyect">
+	<meta name="keywords" content="Trex_Codes, Website, Questions, Quiz, Proyect"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+</head>
+		
+	<body>	
+				<!-- Sec Forms  -->
+				<form id="Forms-index"  name="Forms">
+					
+				<label for="User_form">User:
+				<input name="User" id="form_1" class="forms-group" type="text"  value=""><br><br> <!-- USer -->
+				</label>
+
+				<label for="Email_form">Email:
+				<input name="Email" id="form_2" class="forms-group" type="email"  value=""><br><br> <!-- Email -->
+				</label>
+
+				<label for="Password_form">Password:
+				<input name="Password" id="form_3" class="forms-group" type="password" value=""><br><br> <!-- Password -->
+				</label>
+
+				
+			</form>
+		</div>
+				<a href="javascript:Mostrar()">Mostrar datos</a><br>
+	
+
+
+</body>
+
+<script type="text/javascript">
+	function Mostrar()
+{
+	// console.log("Your User is:"  + Forms.User.value);
+	// console.log("Your Email is:"  + Forms.Email.value);
+	// console.log("Your Password is: " + Forms.Password.value);
+
+	const form$1 = document.getElementById('form_1');
+	console.log(form$1.value);
+	const form$2 = document.getElementById('form_2');
+	console.log(form$2.value);
+	const form$3 = document.getElementById('form_3');
+	console.log(form$3.value);
+
+}
+
+</script>
+</html>

@@ -1,0 +1,258 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Events Examples JS</title>
+</head>
+<body onclick="miFunc()">
+		
+	<div id="focus_blur">
+		<label> Button perder "foco"</label>
+		<button onfocus="focus2()" onblur="blur2()" id="ls">focus-blurHTML</button>
+	</div>
+
+	<div id="onclickDiv">
+		<label> Button onclick</label>
+ 		<button onclick="click1()" id="btn_click1">onclickHTML</button>
+	</div>
+
+	<div id="ondlclickDiv">
+		<label> Button onDouble click</label>
+ 		<button ondblclick="douClick()" id="btn_clickDou">DoubleClickHTML</button>
+ 	</div>
+
+ 	<div id="changevalueinput_Bottom">
+ 		<label>Input change Button</label>
+ 		<input type="text" id="onchangeBtn1">
+	 	<button onclick="onchangeBtnEvent()">Check</button>
+ 	</div>
+
+	<script type="text/javascript">
+
+		// Reload page with event onclick
+		const miFunc = () => alert('Pagina totalmente cargada');
+
+		// ****************************************************************************************
+
+		// BTN HTML
+		const focus2 = () => document.getElementById('ls').style.backgroundColor = 'purple';
+		const blur2 = () => document.getElementById('ls').style.backgroundColor = 'lightgreen';
+
+		// function focus2(){
+		// 	document.getElementById('ls').style.backgroundColor = 'red';
+		// }
+
+		// function blur2(){
+		// 	document.getElementById('ls').style.backgroundColor = 'yellow';
+		// }
+
+		// ************** --- ************** --- ************** --- **************
+
+		// BTN JS
+
+			// Create btn onblur-onfocus
+		var btn_focus = document.createElement('button');
+		var btnText = document.createTextNode('focus-blurJS');
+		btn_focus.setAttribute('id', 'BTN');
+		btn_focus.append(btnText);
+
+		// Events
+		btn_focus.onfocus = focus1;
+		btn_focus.onblur = blur1;
+
+		function focus1(){
+			document.getElementById('BTN').style.backgroundColor = 'red';
+		}
+
+		function blur1(){
+			document.getElementById('BTN').style.backgroundColor = 'yellow';
+		}
+
+		// const focus1 = () => document.getElementById('BTN').style.backgroundColor = 'red';
+		// const blur1 = () => document.getElementById('BTN').style.backgroundColor = 'yellow';
+
+		focus_blur.appendChild(btn_focus);
+		document.body.appendChild(focus_blur);
+
+		let hr = document.createElement('hr');
+		document.body.appendChild(hr);
+
+		// ****************************************************************************************
+	
+		// BTN HTML
+		function click1(){
+			document.getElementById('btn_click1').style.padding = '15px';
+			document.getElementById('btn_click1').style.backgroundColor = 'pink';
+		}	
+
+		// ************** --- ************** --- ************** --- **************
+
+		// BTN JS
+
+			// btn onclick 
+		var btn_onclick = document.createElement('button');
+		var btn_onclickText = document.createTextNode('onclickJS');
+		btn_onclick.setAttribute("id", 'onclickBTN');
+		btn_onclick.append(btn_onclickText);
+
+		// Events
+		btn_onclick.onclick = onclickDOM;
+
+		function onclickDOM(){
+			document.getElementById('onclickBTN').style.padding = '15px';
+			document.getElementById('onclickBTN').style.backgroundColor = 'pink';
+		}
+
+		onclickDiv.appendChild(btn_onclick);
+		document.body.appendChild(onclickDiv);
+
+		let hr2 = document.createElement('hr');
+		document.body.appendChild(hr2);
+
+		// ****************************************************************************************
+
+
+		function douClick (){
+			document.getElementById('btn_clickDou').style.backgroundColor = 'lightgreen';
+			document.getElementById('btn_clickDou').style.padding = '15px';
+		}
+
+		// btn double onclick
+		var btn_doubleOnclick = document.createElement('button');
+		var btn_onclickDoubleText = document.createTextNode('Double OnclickJS');
+		btn_doubleOnclick.setAttribute("id", 'onclickDoubleBTN');
+		btn_doubleOnclick.append(btn_onclickDoubleText);
+
+		// Events
+		btn_doubleOnclick.ondblclick = DblClickDOM;
+
+		function DblClickDOM(){
+			document.getElementById('onclickDoubleBTN').style.backgroundColor = 'lightgreen';
+			document.getElementById('onclickDoubleBTN').style.padding = '15px';
+		}
+
+		ondlclickDiv.appendChild(btn_doubleOnclick);
+		document.body.appendChild(ondlclickDiv);
+
+		let hr3 = document.createElement('hr');
+		document.body.appendChild(hr3);
+		
+		// ****************************************************************************************
+
+		// Input change button 
+
+			// (HTML)
+			function onchangeBtnEvent (){
+			document.getElementById('onchangeBtn1').style.backgroundColor = 'lightblue';
+			document.getElementById('onchangeBtn1').style.padding = '15px';
+			console.info('your name is ' + document.getElementById('onchangeBtn1').value);
+		}
+
+		// (JS)
+		const labelBTN = document.createElement('label'); // label
+		labelBTN.innerText = 'Input change Button2 ';
+		changevalueinput_Bottom.appendChild(labelBTN);
+
+		const createBTN = document.createElement('input'); // input
+		createBTN.setAttribute('id', 'onchangeBtn2');
+		changevalueinput_Bottom.appendChild(createBTN);
+
+		const buttonBTN = document.createElement('button'); // Button
+		buttonBTN.innerText = ' Check2 ';
+		changevalueinput_Bottom.appendChild(buttonBTN);
+
+		let hr4 = document.createElement('hr');
+		document.body.appendChild(hr4);
+		changevalueinput_Bottom.appendChild(hr4);
+
+		// Events Js
+		buttonBTN.onclick = function(){
+			document.getElementById('onchangeBtn2').style.backgroundColor = 'lightblue';
+			document.getElementById('onchangeBtn2').style.padding = '15px';
+			console.info('your name is ' + document.getElementById('onchangeBtn1').value);
+		}
+
+		// ****************************************************************************************
+
+		// Select_Value BTN change
+
+		// Select
+		const selectHtml = document.createElement('select');
+		selectHtml.setAttribute('id', 'onchangeBtn2');
+		selectHtml.onchange = onchangeBtnEvent2;
+
+		// option1
+		const option1 = document.createElement('option');
+		const option1_Text = document.createTextNode('10');
+		option1.setAttribute('value', "10");
+		option1.append(option1_Text);
+		selectHtml.appendChild(option1);
+
+		// option2
+		const option2 = document.createElement('option');
+		const option2_Text = document.createTextNode('14');
+		option2.setAttribute('value', "14");
+		option2.append(option2_Text);
+		selectHtml.appendChild(option2);
+
+		// option3
+		const option3 = document.createElement('option');
+		const option3_Text = document.createTextNode('16');
+		option3.setAttribute('value', "16");
+		option3.append(option3_Text);
+		selectHtml.appendChild(option3);
+
+		// option4
+		const option4 = document.createElement('option');
+		const option4_Text = document.createTextNode("19");
+		option4.setAttribute('value', "19");
+		option4.append(option4_Text);
+		selectHtml.appendChild(option4);
+
+			function onchangeBtnEvent2(){
+			document.getElementById('onchangeBtn2').style.backgroundColor = 'lightblue';
+			document.getElementById('onchangeBtn2').style.padding = '15px';
+			console.info('your name is ' + document.getElementById('onchangeBtn2').value);
+		}
+			document.body.appendChild(selectHtml);
+
+			let hr5 = document.createElement('hr');
+			document.body.appendChild(hr5);
+
+		// ****************************************************************************************
+		
+		// Contador de teclas oprimidas
+
+			const inputKey = document.createElement('input');
+		document.body.appendChild(inputKey);
+		inputKey.onkeydown = clcikkeey;
+
+		inputKey.setAttribute("id", 'keydownId');
+
+		function clcikkeey (){
+		document.getElementById('keydownId').style.backgroundColor = 'red';
+		var coant  = document.getElementById('keydownId').value;
+
+		// contador de teclas pulsadas en el form
+		// console.info(coant.length);
+		var lenhtcoant = coant.length+1;
+		console.info(lenhtcoant);
+	}
+
+
+	// 	
+		onmousedown.onclick =  mouseCreateDiv() => {
+				const div = createElement('div');
+				div.style.backgroundColor = 'grey';
+				div.stle.height = '150px';
+				div.stle.width = '150px';
+		}		
+
+
+
+
+		
+
+
+	</script>
+</body>
+</html>

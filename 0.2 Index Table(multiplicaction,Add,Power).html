@@ -1,0 +1,333 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>for</title>
+	<style type="text/css">
+		*{
+	margin: 0px; 
+	padding: 0px none;
+}
+
+body{
+	background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 76%, rgba(224,239,249,1) 100%);
+}
+
+h1{
+	font-family: sans-serif;
+}
+
+#conteiner{
+	width: 500px;
+	height: 300px;
+	margin: 5vh auto;
+	background: linear-gradient(to right, rgba(210,255,82,1) 12%, rgba(210,255,82,1) 34%, rgba(145,232,66,1) 61%, rgba(145,232,66,1) 76%);
+}
+
+button{
+	width: 10vh;
+	position: relative;
+	margin: 5vh 5vh auto;
+	border-radius: 10px;
+	border: none;
+}
+
+#conteiner button:hover{
+	background-color: #0CF1F2FF;
+}
+
+#h1_title_mult{
+	position: relative;
+	text-align: center;
+
+}
+
+ /**************************************************************************/
+
+#conteiner_2{
+	width: 500px;
+	height: 300px;
+	margin: 5vh auto;
+	background: linear-gradient(to right, rgba(153,208,230,1) 0%, rgba(153,208,230,1) 12%, rgba(85,196,236,1) 56%, rgba(153,208,230,1) 100%);
+}
+
+#conteiner_2 button:hover{
+	background-color: #B0FE42FF;
+}
+
+#h1_title_pot{
+	position: relative;
+	text-align: center;
+}
+
+	</style>
+<body>
+		<!-- MULTIPLICACION -->
+
+		<div id="conteiner">
+				<h1 id="h1_title_mult">Tablas de multiplicar</h1>
+
+				<button id="btn_1">Tabla 1</button>
+				<button id="btn_2">Tabla 2</button>
+				<button id="btn_3">Tabla 3</button>	
+				<button id="btn_4">Tabla 4</button>
+				<button id="btn_5">Tabla 5</button>
+				<button id="btn_6">Tabla 6</button>
+				<button id="btn_7">Tabla 7</button>
+				<button id="btn_8">Tabla 8</button>
+				<button id="btn_9">Tabla 9</button>
+				<button id="btn_10">Tabla 10</button>
+		</div>		
+	
+		<!-- POTENCIACION -->
+
+		<div id="conteiner_2">
+			<h1 id="h1_title_pot">Potencias</h1>
+			
+				<button id="btn_12">NUM 2</button>
+				<button id="btn_13">NUM 3</button>	
+				<button id="btn_14">NUM 4</button>
+				<button id="btn_15">NUM 5</button>
+				<button id="btn_16">NUM 6</button>
+				<button id="btn_17">NUM 7</button>
+				<button id="btn_18">NUM 8</button>
+				<button id="btn_19">NUM 9</button>
+				<button id="btn_20">NUM 10</button>
+		</div>		
+
+
+<script type="text/javascript">
+		
+// let p_emmet = document.querySelectorAll('p');
+// const message = `aca existen ${p_emmet.length} etiquetas <p>`; // cantidad de etiquetas <p> en HTML
+// console.log(message);
+
+function num_1(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("1" + " " + "x" + " " + i + " " + "=" + " " + 1*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+ 
+function num_2(){
+	for(let i = 0; i<30; i++){
+		let cls_opera = ("2" + " " + "x" + " " + i + " " + "=" + " " + 2*i + "<br>");
+
+		document.write(cls_opera);
+
+
+/*		***********************
+		 OTHER FORM
+		***********************
+
+		document.write("2" + "x" + i + "=" + 2*i + "<br>");
+
+		// let p1 = document.createElement('p'); // createElement <p>
+		// document.body.appendChild(p1);  // Padre llama a hijo => p1
+		// p1.setAttribute('id', 'ot2'); // agrega atributo # - 'ot2'
+
+		// document.getElementById('ot2').innerHTML = cls_opera;
+		}
+*/
+	}	
+}
+
+function num_3(){
+	for(let i = 0; i<30; i++){
+		let cls_opera = ("3" + " " + "x" + " " + i + " " + "=" + " " + 3*i + "<br>");
+		document.write(cls_opera);
+	}
+}
+
+function num_4(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("4" + " " + "x" + " " + i + " " + "=" + " " + 4*i + "<br>");
+		document.write(cls_opera);
+	}
+}
+
+function num_5(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("5" + " " + "x" + " " + i + " " + "=" + " " + 5*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_6(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("6" + " " + "x" + " " + i + " " + "=" + " " + 6*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+ 
+function num_7(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("7" + " " + "x" + " " + i + " " + "=" + " " + 7*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_8(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("8" + " " + "x" + " " + i + " " + "=" + " " + 8*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+function num_9(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("9" + " " + "x" + " " + i + " " + "=" + " " + 9*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_10(){
+	for(let i =0; i<30; i++){
+		let cls_opera = ("10" + " " + "x" + " " + i + " " + "=" + " " + 10*i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+// LLAMAR A TODOS LOS ELEMENTOS BUTTONS
+
+/*let buttons = document.getElementById('btn_1');
+buttons.addEventListener('onclick', num_1, false);*/
+
+document.getElementById('btn_1').onclick = function(){
+	num_1()
+}
+
+document.getElementById('btn_2').onclick = function(){
+	num_2()
+}
+document.getElementById('btn_3').onclick = function(){
+	num_3()
+}
+document.getElementById('btn_4').onclick = function(){
+	num_4()
+}
+document.getElementById('btn_5').onclick = function(){
+	num_5()
+}
+document.getElementById('btn_6').onclick = function(){
+	num_6()
+}
+document.getElementById('btn_7').onclick = function(){
+	num_7()
+}
+document.getElementById('btn_8').onclick = function(){
+	num_8()
+}
+document.getElementById('btn_9').onclick = function(){
+	num_9()
+}
+document.getElementById('btn_10').onclick = function(){
+	num_10()
+}
+
+// ************************************************************************
+
+
+function num_12(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("2" + " " + "Elevado" + " " + i + " " + "=" + " " + 2**i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_13(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("3" + " " + "Elevado" + " " + i + " " + "=" + " " + 3**i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_14(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("4" + " " + "Elevado" + " " + i + " " + "=" + " " + 4**i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_15(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("5" + " " + "Elevado" + " " + i + " " + "=" + " " + 5 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_16(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("6" + " " + "Elevado" + " " + i + " " + "=" + " " + 6 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_17(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("7" + " " + "Elevado" + " " + i + " " + "=" + " " + 7 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_18(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("8" + " " + "Elevado" + " " + i + " " + "=" + " " + 8 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_19(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("9" + " " + "Elevado" + " " + i + " " + "=" + " " + 9 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+function num_20(){
+		for(let i = 0; i<30; i++){
+		let cls_opera = ("10" + " " + "Elevado" + " " + i + " " + "=" + " " + 10 **i + "<br>");
+		document.write(cls_opera);
+		}
+	}
+
+
+document.getElementById('btn_12').onclick = function(){
+	num_12();
+}
+
+document.getElementById('btn_13').onclick = function(){
+	num_13();
+}
+
+document.getElementById('btn_14').onclick = function(){
+	num_14();
+}
+
+document.getElementById('btn_15').onclick = function(){
+	num_15();
+}
+
+document.getElementById('btn_16').onclick = function(){
+	num_16();
+}
+
+document.getElementById('btn_17').onclick = function(){
+	num_17();
+}
+
+document.getElementById('btn_18').onclick = function(){
+	num_18();
+}
+
+document.getElementById('btn_19').onclick = function(){
+	num_19();
+}
+
+document.getElementById('btn_20').onclick = function(){
+	num_20();
+}
+
+</script>
+	
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+// cantidad de buttons
+let ls = prompt('cuantos botones');
+
+for (i = 0; i < ls; i++) {
+
+    let $h1_1 = document.createElement('button'); // crea boton
+    $h1_1.style.margin = '5vh';  // style de 5 viewport height
+
+    let = $h1_1Text = document.createTextNode(''); // create text para $h1_1
+    $h1_1.append($h1_1Text); // createbutton llama a hijoText =>  $h1_1(padre) -> $h1_1Text(Hijo) 
+    // console.log(i); // result: cantidad de botones que desee agregar(i)
+
+    var t = prompt('nombre' + " " + (i+1)); // variable prompt ej: juan + recorrido de for +1 -> begin in 1
+        // console.log(t); // valor agregado al prompt 0 'nombre'
+    $h1_1.innerText += ' ' + t; // button creado se le agrega propiedad innerText y se le asginar el valor de var t 
+
+    document.body.appendChild($h1_1); // obejct document.propiedad  appendChild con button creado por DOM
+}
+	</script>
+</body>
+</html>

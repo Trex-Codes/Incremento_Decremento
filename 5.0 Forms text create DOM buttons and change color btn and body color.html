@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Buttons Form</title>
+		<meta name="author" content="Trex_codes">
+		<meta name="description" content="page with forms colors with Forms"">
+		<meta name="keywords" content="Trex_codes">
+  		<style type="text/css">
+  			input{
+  				margin: 20px;
+  			}
+
+  			button{
+  				padding: 10px 10px;
+  				margin: 6vw;
+  			}
+		</style>
+	</head>
+	<body>
+
+<!-- Start Forms -->
+	<form  name="forms" id="forms_buttons">
+
+		<!-- <label for="form_one"> -->
+		<!-- forms -->
+		<input type="text" name="form_01" value="">
+		<input type="text" name="form_02" value="">
+		<input type="text" name="form_03" value=""><br>
+	
+		<!-- buttons -->
+		<button type="button" id="btn_1"></button>
+		<button type="button" id="btn_2"></button>
+		<button type="button" id="btn_3"></button>
+
+	</form>
+
+	<button id="a_hiper" onclick="javascript:form_get()">Mostrar Resultados</button>
+	
+
+<script type="text/javascript">
+
+	function form_get(){
+		
+	data = {
+		value1: forms.form_01.value, // FORMULA:  form:name + input:name + value
+		value2: forms.form_02.value,
+		value3: forms.form_03.value,
+	}
+/*
+	console.log(data.value1); // valor digitado por user en form 01
+	console.log(data.value2); // valor digitado por user en form 02
+	console.log(data.value3); // valor digitado por user en form 03*/
+
+	document.getElementById('a_hiper').onclick = function(){
+
+		// call btn_1 
+		var call01 = document.getElementById('btn_1');
+		call01.innerText = data.value1;
+		// call01.innerText = forms.form_01.value;
+
+		document.getElementById('btn_1').onclick = function(){
+		document.body.style.background = data.value1;
+		}
+
+		// call btn_2
+		var call02 = document.getElementById('btn_2');
+		call02.innerText = data.value2;
+
+		document.getElementById('btn_2').onclick = function(){	
+			document.body.style.background = data.value2;
+		}
+
+		// call btn_3
+		var call03 = document.getElementById('btn_3');
+		call03.innerText = data.value3;
+
+		document.getElementById('btn_3').onclick = function(){	
+			document.body.style.background = data.value3;
+		}
+	}
+}
+
+</script>
+
+</body>
+</html>
+
+ <!-- ****************************************************** -->
+ <!-- ****************************************************** -->
+ <!-- ****************************************************** -->
+ <!-- ****************************************************** -->
+ <!-- ****************************************************** -->
+  				<!-- SECOND OPTION PROYECT -->
+
+ <html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+		<input type="text" id="form1">
+		<input type="text" id="form2">
+		<input type="text" id="form3">
+
+		<button id="showInfo" onclick="CreateForms();">Mostrar Resultados</button><br><br>
+
+	<script type="text/javascript">
+			
+		// 3 forms text que el user digita un color, luego al activar el boton "mostar resultados" me genera 3 botones con ese el color indicado en los input text 
+
+	// 	function ShowValue(){
+	// 	// mostar el valor de cada form
+	// 	let infoValue_Form1 = document.getElementById('form1');
+	// 	let infoValue_Form2 = document.getElementById('form2');
+	// 	let infoValue_Form3 = document.getElementById('form3');
+
+	// 	// console.log(); cada value form
+	// 	console.log(infoValue_Form1.value);
+	// 	console.log(infoValue_Form2.value);
+	// 	console.log(infoValue_Form3.value);
+	// }
+
+	// **************************************************************
+
+	// Funcion que obtiene los valores de cada form y crea button con cada valor
+	function CreateForms(){
+		// Dom de cada form type text 
+		let infoValue_Form1 = document.getElementById('form1');
+		let infoValue_Form2 = document.getElementById('form2');
+		let infoValue_Form3 = document.getElementById('form3');
+
+		// Crear button DOM con innerText -> forms user
+		const btn_1 = document.createElement('button');
+		btn_1.setAttribute('id', 'buttonD01');
+		var btn_1Text = document.createTextNode(infoValue_Form1.value);
+		btn_1.append(btn_1Text);
+		document.body.appendChild(btn_1);
+
+		const btn_2 = document.createElement('button');
+		btn_2.setAttribute('id', 'buttonD02');
+		var btn_2Text = document.createTextNode(infoValue_Form2.value);
+		btn_2.append(btn_2Text);
+		document.body.appendChild(btn_2);
+
+		const btn_3 = document.createElement('button');
+		btn_3.setAttribute('id', 'buttonD03');
+		var btn_3Text = document.createTextNode(infoValue_Form3.value);
+		btn_3.append(btn_3Text);
+		document.body.appendChild(btn_3);
+
+		// Boton Reset all 
+		const btnRestart = document.createElement('button');
+		btnRestart.setAttribute('id', 'restartBtn');
+		var btnRestartText = document.createTextNode('Restart');
+		btnRestart.append(btnRestartText);
+		document.body.appendChild(btnRestart);
+
+	/*	Call cada #id de cada button que crea el DOM 
+		agregar ONCLICK para poder cambiarlos de color con el color por user
+	*/
+		let DomBtn_1 = document.getElementById('buttonD01');
+		let DomBtn_2 = document.getElementById('buttonD02');
+		let DomBtn_3 = document.getElementById('buttonD03');
+		let DOMBTNRestart = document.getElementById('restartBtn');
+
+		DomBtn_1.onclick = function(){
+			document.body.style.background = infoValue_Form1.value;
+			DomBtn_1.style.background = infoValue_Form1.value;
+			DomBtn_1.style.border = 'none';
+
+		}
+		DomBtn_2.onclick = function(){
+			document.body.style.background = infoValue_Form2.value;
+			DomBtn_2.style.background = infoValue_Form2.value;
+			DomBtn_2.style.border = 'none';
+		}
+		DomBtn_3.onclick = function(){
+			document.body.style.background = infoValue_Form3.value;
+			DomBtn_3.style.background = infoValue_Form3.value;
+			DomBtn_3.style.border = 'none';
+		}
+
+		// Styles buttons Create for DOM
+		DomBtn_1.style.margin = '50px';
+		DomBtn_2.style.margin = '50px';
+		DomBtn_2.style.margin = '100px';
+		DOMBTNRestart.style.margin = '100px';
+
+		// Onclick btn Restart
+		DOMBTNRestart.onclick = function(){
+			document.body.style.background = 'initial';
+			DomBtn_1.style.background = 'initial';
+			DomBtn_2.style.background = 'initial';
+			DomBtn_3.style.background =	'initial';
+		}
+	}
+	
+	</script>
+</body>
+</html>
+

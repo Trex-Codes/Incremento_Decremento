@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sucesiones // input >0 && <9</title>
+</head>
+<body>	
+		<!-- sucesion 01 -->
+		<button id="suc1" onclick="Suc1()">Presion aqui para la sucesion  (3,5,7,9,11...)</button><br><br>
+		
+	<!-- Form con number with rango y el valor sea >0; <9 -->
+
+		<!-- INPUT -01 -->
+			<label>Input 1:</label>
+		<input id="numerRange" type="number" min="0" max="9"> 
+			
+		<!-- INPUT -02 -->
+			<label>Input 2:</label>
+		<input type="number" min="0" max="9" id="numberRange2">
+		<button id="value" onclick="valorRange()">Evaluar</button>
+		 
+
+	<script type="text/javascript">
+		
+	function Suc1(){
+		// sucesion 01
+		// 2n+1
+		for(numStart  = prompt('Numero de Inicio'); numStart<10; numStart++){
+			console.log(2*numStart+1);
+		}
+	}
+
+	function valorRange(){
+		const CallDOm = document.getElementById('numerRange');
+		// console.log(CallDOm.value); // Valor del input
+
+		if(CallDOm.value > 0 && CallDOm.value < 9){
+			alert('Valor aceptado');
+			CallDOm.style.background = 'green';
+		}else {
+			alert('Valor Invalido');
+			CallDOm.style.background = 'red';
+		}
+
+		const CallDom2 = document.getElementById('numberRange2');
+		// console.log(CallDom2); // valor del input2
+
+		if (CallDom2.value > 0 && CallDom2.value <9) {
+			alert('valor Aceptado');
+			CallDom2.style.backgroundColor = 'green';
+		}else {
+			alert('Valor Invalido');
+			CallDom2.style.backgroundColor = 'red';
+		}
+	}
+
+
+
+	</script>
+</body>
+</html>

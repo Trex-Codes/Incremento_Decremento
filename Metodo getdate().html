@@ -1,0 +1,100 @@
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>Hotel Hugnston</title>
+		<meta name = "author" content="Trex_Codes">
+		<meta name = "description" content="Hotel Hugnston">
+		<meta name = "keywords" content="Trex_Codes, Hotel Hugnston, Hotel">
+	</head>
+
+<body>
+
+	<p id="d2"></p>
+
+	<script type="text/javascript">
+
+		// foma de llamar un metodo Date
+		
+		const dia = new Date('may 17, 1995 12:43:20');
+		const dia2 = new Date(13,05,2003);
+		cumpleanos = new Date(1995,11,17,3,24,0);
+		origin_dia = new Date();
+
+		console.log(dia);
+		console.log(dia2);
+		console.log(cumpleanos);
+		console.log("La fecha de hoy es : " + origin_dia);
+
+		// *getFullyear* // year
+		// declarar variable y asignar metodo Data con el metodo getfullyear
+		var d = new Date().getFullYear(); // year
+		document.write(d);
+
+		// declalar variable y asignarle el metodo Date y llamar a el ID d2 y accinarle el metodo de d2
+		var d2 = new Date();
+		document.getElementById("d2").innerHTML = d2.getFullYear();
+
+		// *getMonth* // mes de hoy
+		var d = new Date().getMonth();
+		console.log(d+1); // se le suma 1 ya que el metodo empieza desde (0-11)
+
+		// *getDate* // fecha de hoy
+		var dx = new Date().getDate();
+		console.log(dx);
+
+		// *getHours* // hora (0-23 Hrs)
+		var dh = new Date().getHours();
+		console.log(dh);
+
+		// *getMinutes* // minutos (0-59)
+		var gm = new Date().getMinutes();
+		console.log(gm);
+
+		// *getSeconds* // seconds (0-59)
+		var gse = new Date().getSeconds();
+		console.log(gse);
+
+		// *getMillisencods* // milisengundos(0-999)
+		var gemil = new Date().getMilliseconds();
+		console.log(gemil);
+
+		// *getTime* // (milisegundos mes dia year)
+		var gt = new Date().getTime();
+		console.log(gt);
+
+		// * getDay* // dia semana (0-6)
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		var gd = new Date().getDay();
+		console.log("el numero de la semana de hoy es: " + days[gd]);
+		console.log("dia semana sin array: " +  gd);
+
+		// Date.now* // da el tiempo 
+		var dn = Date.now();
+		console.log(dh);
+
+		// dar el tiempo real con metodos 
+
+		const hournow = new Date().getFullYear();
+		const hournow2 = new Date().getMonth();
+		const hournow3 = new Date().getDay();
+		console.log("Year is: " + hournow + " " + "El mes es: " +  hournow2 + " "+  "El dia es: " + hournow3); 
+
+
+
+
+		
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Table Forms</title>
+</head>
+<body>
+		<table border="1">
+				<tr>
+					<th>Producto</th>
+					<th>cantidad</th>
+					<th>valor c/u</th>
+					<th>Subtotal</th>
+				</tr>
+				<tr>
+					<td>Banano</td>
+					<td><input id="cant1" type="number" max="100"></td>
+					<td id="valcu1">1200</td>
+					<td id="prodc1"></td>
+				</tr>
+				<tr>
+					<td>manzana</td>
+					<td><input id="cant2" type="number" max="100"></td>
+					<td id="valcu2">800</td>
+					<td id="prodc2"></td>
+				</tr>
+				<tr>
+					<td>Pera</td>
+					<td><input id="cant3" type="number" max="100"></td>
+					<td id="valcu3">700</td>
+					<td id="prodc3"></td>
+				</tr>
+		</table>
+
+		
+
+			<button id="root" onclick="react();">sum</button>
+
+		<script type="text/javascript">
+				
+				function react(){
+
+				// producto 1 
+				let ca1 = document.getElementById('cant1');
+				// console.log(ca1.value); // Cantidad de producto1 
+				let cantc_u1 = document.getElementById('valcu1');
+				// console.log(cantc_u1.innerHTML); Precio valor c/u del producto = 1.200
+				
+				let operation_1 = ca1.value*cantc_u1.innerHTML;
+				let subto1 = document.getElementById('prodc1').innerHTML = operation_1;
+				
+				// Producto 2 
+				let ca2 = document.getElementById('cant2');
+				// console.log(ca2.value); // Cantidad de producto2
+				let cantc_u2 = document.getElementById('valcu2');
+				// console.log(cantc_u2.innerHTML);  // precio valor c/u del producto = 800
+
+				let operation_2 = ca2.value*cantc_u2.innerHTML;
+				let subto2 = document.getElementById('prodc2').innerHTML = operation_2;
+
+				// producto 3 
+				let ca3 = document.getElementById('cant2');
+				// console.log(ca1.value); // Cantidad de producto3
+				let cantc_u3 = document.getElementById('valcu3');
+				// console.log(cantc_u3.innerHTML); // Precio valor c/u del producto = 700;
+
+				let operation_3 = ca3.value*cantc_u3.innerHTML;
+				let subto3 = document.getElementById('prodc3').innerHTML = operation_3;
+
+
+				// // Tabla subtotal 
+				// let sums_all_products = operation_1+operation_2+operation_3;
+				// let tat_sub = document.getElementById('valor_sub').innerHTML = sums_all_products;
+
+				// Table 
+
+				let tabl_subto = document.createElement('table');
+				tabl_subto.setAttribute("id", "table_subtotal");
+				tabl_subto.style.border = '1px solid black'; // Style CSS
+				tabl_subto.style.background = 'lightgreen';
+				tabl_subto.style.marginTop = '30px';
+				
+				document.body.appendChild(tabl_subto); // body => table
+
+				/// tr
+				let tabl_tr = document.createElement('tr');
+				tabl_subto.appendChild(tabl_tr); // table => tr
+
+				// th
+				let tabl_th = document.createElement('th');
+				let tabl_th_text = document.createTextNode('SUBTOTAL A PAGAR');
+				tabl_th.append(tabl_th_text);
+
+				tabl_tr.appendChild(tabl_th); // tr => th
+
+				/// tr2
+				let tabl_tr2 = document.createElement('tr');
+				tabl_subto.appendChild(tabl_tr2); // table => tr
+
+				// td
+				let tabl_td = document.createElement('td');
+				let tabl_td_text = document.createTextNode(operation_1+operation_2+operation_3);
+				tabl_td.append(tabl_td_text);
+
+				tabl_tr2.appendChild(tabl_td);
+				}
+
+
+
+
+
+
+
+		</script>
+
+</body>
+</html>

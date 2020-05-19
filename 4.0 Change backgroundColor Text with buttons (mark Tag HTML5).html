@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>F</title>
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+	<p id="ls">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem accusantium nobis? Vel, labore! Harum, molestias? Ut iure maxime sequi hic voluptatibus accusamus, enim doloribus, impedit esse aut laboriosam aperiam? Error totam, rem dolor voluptates, culpa nemo distinctio laboriosam dolorum numquam quasi quo magni, atque iure aut ipsum unde, sequi facilis quae tempora. Provident nemo voluptates, omnis dicta quibusdam tempora quidem expedita deserunt facilis, dolor ex libero nesciunt est quis.</p>
+
+	<p id="ls2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi labore commodi blanditiis, minus. Omnis tenetur aut, ratione perferendis voluptates. Cumque numquam earum nulla minima vel maiores quas, beatae architecto nobis.</p>
+
+	<button id="btn_1">Cambiar</button>
+	<button id="btn_2">Regresar</button><br><br>
+
+	<button id="btn_3">Cambiar2</button>
+	<button id="btn_4">Regresar2</button>
+
+	<script type="text/javascript">
+
+		// Cambiar por medio de botones el background de un texto(<mark></mark>) => yellow 
+		let root = document.getElementById('ls');
+		let btn1 = document.getElementById('btn_1');
+		let btn2 = document.getElementById('btn_2');
+
+		btn1.onclick  = function(){
+			root.style.background = 'yellow';
+		}
+
+		btn2.onclick = function(){
+			root.style.background = 'initial';
+		}
+
+		// 2) Forma en cambio de ser background = 'yellow'; 
+			  // cambie la etiqueta <p> por <mark>
+
+		// Cambiar por medio de botones el background de un texto(color por user);
+
+		var pr = prompt('digite un color');
+
+		let root2 = document.getElementById('ls2');
+		let btn3 = document.getElementById('btn_3');
+		let btn4 = document.getElementById('btn_4');
+
+		btn3.onclick  = function(){
+			root2.style.background = pr;
+		}
+
+		btn4.onclick = function(){
+			root2.style.background = 'initial';
+		}
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+	</script>
+</body>
+</html>

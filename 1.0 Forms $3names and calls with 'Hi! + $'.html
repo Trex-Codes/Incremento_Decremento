@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Forms $3names and calls with "Hi! $"</title>
+		<meta name="author" content="Trex_codes">
+		<meta name="description" content="page with forms colors with Forms"">
+		<meta name="keywords" content="Trex_codes">
+  		<style type="text/css">
+  			button{
+  				margin: 5vh;
+  			}
+
+  			p{
+				margin: 5vh;
+  			}
+
+		</style>
+	</head>
+	<body>
+			<button id="bnt_1"></button>
+			<button id="bnt_2"></button>
+			<button id="bnt_3"></button>
+
+		<script type="text/javascript">
+
+		const $name1 = prompt('Nombre 1');
+		const $name2 = prompt('Nombre 2');
+		const $name3 = prompt('Nombre 3');
+
+		let  usersNick = [$name1, $name2, $name3];
+		console.log(usersNick);
+		
+		// llamar DOM a cada button
+		let by_1 = document.getElementById('bnt_1');
+		by_1.innerText = 'Saludar a ' + " " + usersNick[0];
+
+		let by_2 = document.getElementById('bnt_2');
+		by_2.innerText = 'Saludar a ' + " " + usersNick[1];
+
+		let by_3 = document.getElementById('bnt_3');
+		by_3.innerText = 'Saludar a ' + " " + usersNick[2];
+
+		// .onclick button functions
+
+		by_1.onclick = function(){
+			// console.log('Hi! ' + " " + usersNick[0]);
+			userNick1();
+		}
+
+		by_2.onclick = function(){
+			// console.log('Hi! ' + " " + usersNick[1])
+			userNick2();
+		}
+
+		by_3.onclick = function(){
+			// console.log('Hi! ' + " " + usersNick[2])
+			userNick3();
+		}
+
+		// Llamar a los usersNick sin bottons => atravez de <p> create for JS 
+
+		// document.write('hi! ' + " " + usersNick[0] + "<br>");
+		// document.write('hi! ' + " " + usersNick[1] + "<br>");
+		// document.write('hi! ' + " " + usersNick[2]);
+
+		//  create element <p> by DOM
+		function userNick1(){
+		const $h1_1 = document.createElement('p');
+		let = $h1_1Text = document.createTextNode('Hi! ' + " "  + usersNick[0]);
+		$h1_1.append($h1_1Text);
+		document.body.appendChild($h1_1);
+
+		// Styles css
+		$h1_1.style.position = 'absolute';
+		}
+
+		function userNick2(){
+		const $h1_2 = document.createElement('p');
+		let = $h1_2Text = document.createTextNode('Hi! ' + " " + usersNick[1]);
+		$h1_2.append($h1_2Text);
+		document.body.appendChild($h1_2);
+
+		// Styles css
+		$h1_2.style.marginLeft = '210px';
+		$h1_2.style.position = 'absolute';
+		}
+
+		function userNick3(){
+		const $h1_3 = document.createElement('p');
+		let = $h1_3Text = document.createTextNode('Hi!' + " " + usersNick[2]);
+		$h1_3.append($h1_3Text);
+		document.body.appendChild($h1_3);
+
+		// Styles css
+		$h1_3.style.marginLeft = '400px';
+		$h1_3.style.position = 'absolute';
+		}
+		</script>
+	</body>
+	</html>

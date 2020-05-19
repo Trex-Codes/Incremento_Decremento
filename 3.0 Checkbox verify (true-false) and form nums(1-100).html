@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Checkbox</title>
+</head>
+<body>
+		<input id="check_1" class="check" type="checkbox" onclick="renameCU();" onclick="rename();">01<br>
+		<input id="check_2" class="check" type="checkbox" onclick="renameCU2();" onclick="rename();">02<br>
+		<input id="check_3" class="check" type="checkbox" onclick="renameCU3();" onclick="rename();">03<br>
+
+		<button id="tree">SEND</button>
+		<input id="ls" type="number" name="numero" min="0" max="50">
+	
+
+	<script type="text/javascript">
+			
+			// DOM de cada input checkbox
+			let sut1 = document.getElementById('check_1');
+			let sut2 = document.getElementById('check_2');
+			let sut3 = document.getElementById('check_3');
+
+			// imrpime el valor de cada checkbox -> on/off
+			//Evalue las 3 al mismo tiempo
+			function rename(){
+			if(sut1.checked == true){
+				console.log('true');
+			}else {
+				console.log('false');
+			}
+
+			if(sut2.checked == true){
+				console.log('true');
+			}else {
+				console.log('false');
+			}
+
+			if(sut3.checked == true){
+				console.log('true');
+			}else {
+				console.log('false');
+			}
+		} 
+			// evalua c/u 
+			function renameCU(){
+				if(sut1.checked == true){
+				console.log('true');
+			}else {
+				console.log('false');
+			}
+		}
+						function renameCU2(){
+								if(sut2.checked == true){
+								console.log('true');
+							}else {
+								console.log('false');
+							}
+						}
+									function renameCU3(){
+											if(sut3.checked == true){
+											console.log('true');
+										}else {
+											console.log('false');
+										}
+									}
+
+
+
+
+			/*sut1.onclick = function(){
+				console.log(sut1.value);
+			}
+
+			sut2.onclick = function(){
+				console.log(sut2.value);
+			}
+
+			sut3.onclick = function(){
+				console.log(sut3.value);
+			}
+*/
+			// *******************************
+
+			// input button imprime en console.log('') el valor introducido
+			var tot = document.getElementById('tree');
+			var tot2 = document.getElementById('ls')
+			tot.onclick = function(){
+				console.log(tot2.value);
+			}
+
+
+			
+
+	</script>
+</body>
+</html>
