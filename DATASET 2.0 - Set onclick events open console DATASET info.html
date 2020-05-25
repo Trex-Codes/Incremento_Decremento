@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DATASET 2.0 - SET ONCLICK EVENTS OPEN CONSOLE DATASET INFO</title>
+</head>
+<body>
+	<ul>
+		<li onclick="SeePotato()" id="LI1" data-sowing-time ="6 meses" data-large="10cm" data-cwater="10L">
+			<p>papa</p>
+		</li>
+		<li onclick="seeCorn()" id="LI2" data-sowing-time="2 meses" data-large="34cm" data-cwater="25L">
+			<p>Maiz</p>
+		</li>
+	</ul>
+
+<script type="text/javascript">
+	function SeePotato(){
+		var li1 = document.getElementById('LI1');
+		console.log('Los datos de la papa son: ');
+		console.log(li1.dataset.sowingTime);
+		console.log(li1.dataset.large);
+		console.log(li1.dataset.cwater);
+}
+
+function seeCorn(){
+	var li2 = document.getElementById('LI2');
+		console.log('Los datos de la maiz son: ');
+		console.log(li2.dataset.sowingTime);
+		console.log(li2.dataset.large);
+		console.log(li2.dataset.cwater);
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DATASET 3.0 - change  values with Prompt</title>
+</head>
+<body>
+		<div id="Divhtml" data-name1="" data-name2=""></div>
+
+
+		<script type="text/javascript">
+		
+		// llama cada valor y lo guarda en un variable	
+		const prompt1 =	prompt('Valor de atributo data-name1');
+		const prompt2 =	prompt('Valor de atributo data-name2');
+				
+		// llama por DOM los atributos del DIV
+		var DivDomHTML = document.getElementById('Divhtml');
+
+		// llama cada atributo y le cambia su valor
+		DivDomHTML.setAttribute('data-name1', prompt1);
+		DivDomHTML.setAttribute('data-name2', prompt2);
+		
+	/*	llama el valor de cada atributo luego de 
+		los cambios anteriores					
+	*/	
+		console.log(DivDomHTML.dataset.name1);
+		console.log(DivDomHTML.dataset.name2);
+			
+			
+		</script>
+</body>
+</html> 

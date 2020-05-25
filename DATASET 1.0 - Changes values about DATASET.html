@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DATASET 1.0 - Changes values about DATASET</title>
+</head>
+<body>
+
+
+	<!-- Atributos agregados en HTML -->
+	<article id="artc" data-name="Juan"  data-code="13"></article>		
+
+			<script type="text/javascript">
+			
+			// llamar el atributo data del elemento html
+			var callHTML = document.getElementById('artc');
+				console.log(callHTML.dataset.name); // Call por console.log a atriuto data-name
+				console.log(callHTML.getAttribute('data-name')); // Call por metodo getAttribute a atributo data-name	
+				
+			// cambiar el valor del atributo data-name 
+			var setAtribData1 = callHTML.setAttribute('data-name', 'Mariajose')
+				console.log(callHTML.getAttribute('data-name')); // juan --> mariajose
+
+			// Cambiar el valor de atributo data-code
+			var setAtribData2 = callHTML.setAttribute('data-code', '20');
+				console.log(callHTML.getAttribute('data-code')); // 13 -> 20
+
+			</script>
+
+</body>
+</html>
