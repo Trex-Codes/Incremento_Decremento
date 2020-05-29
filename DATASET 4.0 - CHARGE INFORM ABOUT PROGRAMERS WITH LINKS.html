@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML verif </title>
+	<style type="text/css">
+		#p3{
+			text-decoration: none;
+			color: black;
+		}
+		#p6{a
+			text-decoration: none;
+			color: black;
+		}
+		#p9{
+			text-decoration: none;
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+
+<article style="background-color: lightgreen;" id="arT" data-user="Trex_Codes" data-code="14" data-linkgit="https://github.com/juan1305">
+		
+		<!-- Programmer #1 -->
+		<h2>Trex_Codes</h2>
+		<button type="button" id="btn" onclick="data1()">DATOS SOBRE Trex_Codes</button>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<p>	<a href="#" id="p3"></a></p>
+	
+	</article>
+
+<article style="background-color: lightblue;" id="arT2" data-user ="Julian_Suys" data-code="24" data-linkgit="https://github.com/Julian_Suys">
+		
+		<!-- Programmer #2 -->
+		<h2>Julian_Suys</h2>
+		<button type="button" id="btn2" onclick="data2()">DATOS SOBRE Julian_Suys</button>
+		<p id="p4"></p>
+		<p id="p5"></p>
+		<p>	<a href="#" id="p6"></a></p>
+	
+	</article>
+
+<article style="background-color: #F49ED9FF;" id="arT3" data-user="bnjan_Tuv" data-code="43" data-linkgit="https://github.com/bryan$234">
+		
+		<!-- Programmer #3 -->
+		<h2>bryan$234</h2>
+		<button type="button" id="btn3" onclick="data3()">DATOS SOBRE bryan$234</button>
+		<p id="p7"></p>
+		<p id="p8"></p>
+		<p><a href="#" id="p9"></a></p>
+
+</article>
+	
+
+	<script type="text/javascript">
+		
+	function data1(){
+		// article 
+		var ls = document.getElementById('arT');
+
+		//  llamar p(1-3)
+		var p1Ca = document.getElementById('p1');
+		p1Ca.innerHTML = ls.dataset.user;
+		var p2Ca = document.getElementById('p2');
+		p2Ca.innerHTML = ls.dataset.code;
+
+		var p3Ca = document.getElementById('p3');
+			p3Ca.innerHTML = "Github juan1305"; // texto de <a> 
+			p3Ca.href = ls.dataset.linkgit; // atributo href de <a>
+	}
+
+	function data2(){
+
+	// article2 
+	var ls2 = document.getElementById('arT2');
+
+	// llamar a p(4-6)
+	var p4Ca = document.getElementById('p4');
+	p4Ca.innerHTML = ls2.dataset.user;
+	var p5Ca = document.getElementById('p5');
+	p5Ca.innerHTML = ls2.dataset.code;
+
+	var p6Ca = document.getElementById('p6');
+		p6Ca.innerHTML = 'Github Julian_Suys ';
+		p6Ca.href = ls2.dataset.linkgit;
+	}
+
+	function data3(){
+
+		// article2
+		var ls3 = document.getElementById('arT3');
+
+		// llamar a p(7-9)
+		var p7Ca = document.getElementById('p7');
+		p7Ca.innerHTML = ls3.dataset.user;
+		var p8Ca = document.getElementById('p8');
+		p8Ca.innerHTML = ls3.dataset.code;
+
+		var p9Ca = document.getElementById('p9');
+		p9Ca.innerHTML = 'github bryan$234';
+		p9Ca.href = ls3.dataset.linkgit;
+
+	}
+
+	</script>
+
+</body>
+</html>
