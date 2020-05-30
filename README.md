@@ -25,6 +25,10 @@ _Multi-personal projects available based on `HTML-CSS-JS` languages_:
 - catups_content_arrays.js
 - Constructor_functions_objects.js
 - Create Divs with prompt on position Y.html
+- DATASET 1.0 - Changes values about DATASET.html
+- DATASET 2.0 - Set onclick events open console DATASET info.html
+- DATASET 3.0 - change  values with Prompt.html
+- DATASET 4.0 - CHARGE INFORM ABOUT PROGRAMERS WITH LINKS.html
 - create_web_site_DOM_nodos.js
 - double_por_2-escala_nota-Promedio_nota-Area_triangulo.html
 - encuest_user-sum_datos-conversiones.html
