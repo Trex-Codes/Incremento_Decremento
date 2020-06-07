@@ -1,0 +1,168 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	</head>
+<body>
+			<p>x</p><canvas style="border: 1px solid black;" id="tutorial" width="1000" height="500"></canvas><p>y</p>
+
+
+		<script type="text/javascript">
+		
+	var canvas = document.getElementById('tutorial');
+	var ctx = canvas.getContext('2d');
+
+
+	// ienas montañas
+	// ctx.beginPath();
+	// ctx.moveTo(0,500);
+	// ctx.lineTo(100,0);
+	// ctx.lineTo(200,500)
+	// ctx.lineTo(300,0);
+	// ctx.lineTo(400,500);
+	// ctx.lineTo(500,0);
+	// ctx.lineTo(600,500);
+	// ctx.lineTo(700,0);
+	// ctx.lineTo(800,500);
+	// ctx.lineTo(900,0);
+	// ctx.lineTo(1000,500);
+	// ctx.stroke();
+	// ctx.closePath();
+
+	
+
+	// 1
+	ctx.beginPath();
+	ctx.fillStyle = 'rgba(14,118,151,0.4)';
+	ctx.fillRect(190, 65, 50, 50);
+	ctx.strokeRect(190 ,65, 50, 50);
+	ctx.closePath();
+
+	// 2
+	ctx.beginPath();
+	ctx.fillRect(180, 85, 50, 50);
+	ctx.strokeRect(180, 85, 50, 50);
+	ctx.closePath();
+
+
+	// 3
+	ctx.beginPath();
+	ctx.fillRect(190, 115, 50, 50);
+	ctx.strokeRect(190, 115, 50, 50);
+	ctx.closePath();
+
+	// cuadro grande1 
+	ctx.beginPath();
+	ctx.fillRect(240, 65, 100, 100);
+	ctx.strokeRect(240, 65, 100, 100);
+	ctx.closePath();
+
+
+	// 4
+	ctx.beginPath();
+	ctx.fillRect(180, 135, 50, 50);
+	ctx.strokeRect(180, 135, 50, 50);
+
+
+
+
+	// linea conexion 1-2 
+	ctx.beginPath();
+	ctx.moveTo(180, 85);
+	ctx.lineTo(190, 65);
+	ctx.lineTo(240, 65);
+	ctx.lineTo(230, 85);
+	ctx.stroke();
+	ctx.closePath();
+
+	// linea conexion 2-3
+
+	ctx.beginPath();
+	ctx.moveTo(190, 115);
+	ctx.lineTo(180, 135);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(240,115)
+	ctx.lineTo(230, 135);
+	ctx.stroke();
+	ctx.closePath();
+
+	// linea conexion 3-4
+	ctx.beginPath();
+	ctx.moveTo(240,165);
+	ctx.lineTo(230,185);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(190, 165);
+	ctx.lineTo(180, 185);
+	ctx.stroke();
+	ctx.closePath();
+
+
+	// recta medio triangulo 
+	ctx.beginPath();
+	ctx.moveTo(240, 115);
+	ctx.lineTo(340, 115);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.fillRect(230, 135, 110, 50);
+	ctx.strokeRect(230, 135, 110, 50);
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(180, 135);
+	ctx.lineTo(340, 135);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(240, 65);
+	ctx.lineTo(340, 115);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.moveTo(230, 85);
+	ctx.lineTo(340, 135);
+	ctx.stroke();
+	ctx.closePath();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

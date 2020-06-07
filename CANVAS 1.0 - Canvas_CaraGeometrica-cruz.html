@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	</head>
+<body>
+			<canvas style="border: 1px solid black;" id="tutorial" width="1000" height="500"></canvas>
+
+
+
+		<script type="text/javascript">
+		
+	var canvas = document.getElementById('tutorial');
+	var ctx = canvas.getContext('2d');
+
+	ctx.fillStyle = "lightblue";
+	ctx.strokeRect(50, 50, 100, 100);
+	ctx.fillRect(50, 50, 100, 100);
+
+	// ojo 1
+	ctx.clearRect(59, 59, 30, 30);
+	ctx.strokeRect(59, 59, 30, 30);
+
+	// ojo 2
+	ctx.clearRect(110, 59, 30, 30);
+	ctx.strokeRect(110, 59, 30, 30);
+
+	// boca
+	ctx.clearRect(59, 109, 80, 30)
+	ctx.strokeRect(59, 109, 80, 30);
+	// ctx.rect(X, Y, WIDTH, HEIGHT);
+
+
+	// cruz
+	// lado horizontal
+	ctx.fillStyle = 'grey';
+	ctx.fillRect(300, 120, 480, 60);
+	ctx.strokeRect(300, 120, 480, 60);
+
+	// lado vertical
+	ctx.fillStyle = 'lightgreen';
+	ctx.fillRect(530,40, 60, 350);
+	ctx.strokeRect(530, 40, 60, 350);
+
+	</script>
+</body>
+</html>

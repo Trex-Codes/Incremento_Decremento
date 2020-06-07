@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	</head>
+<body>
+			<p>x</p><canvas style="border: 1px solid black;" id="tutorial" width="1000" height="500"></canvas><p>y</p>
+
+
+		<script type="text/javascript">
+		
+	var canvas = document.getElementById('tutorial');
+	var ctx = canvas.getContext('2d');
+
+	// CUADRADOk
+	ctx.beginPath();
+	ctx.fillStyle = "lightblue";
+	ctx.strokeRect(50, 50, 100, 100); // borde rectangulo
+	ctx.fillRect(50, 50, 100, 100); // cuadrado
+	ctx.clearRect(75, 75, 50, 50); // espacio blanco
+	ctx.strokeRect(80, 80, 40, 40);
+	ctx.closePath();
+
+	// LINEAS
+	ctx.beginPath();
+	ctx.fillStyle = 'lightgreen';
+	ctx.moveTo(120,0); // linea de inicio
+	ctx.lineTo(120,500 ); // linea de final
+	ctx.stroke(); // contorno 
+	ctx.closePath(); 
+
+	// triangulo 2
+	ctx.beginPath(); 
+	ctx.moveTo(200,200);
+	ctx.lineTo(200, 100);
+	ctx.lineTo(450, 200);
+	ctx.lineTo(200, 200);
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+	// Rectangulo 2
+	ctx.beginPath();
+	ctx.fillStyle = 'gold';
+	ctx.fillRect(200, 250, 250, 100);
+	ctx.strokeRect(200, 250, 250, 100);
+	ctx.stroke();
+	ctx.closePath();
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

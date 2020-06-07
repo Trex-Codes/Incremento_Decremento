@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	</head>
+<body>
+			<canvas style="border: 1px solid black" id="tutorial" width="1000" height="500"></canvas><br><br>
+
+			<button type="button" d="sp1" onclick="funcBut1()">Cuadro1</button>
+			<button type="button" id="sp2" onclick="funcBut2()">Cuadro2</button>
+			<button type="button" id="sp3" onclick="funcBut3()">Cuadro3</button>
+			<button type="button" id="sp4" onclick="funcBut4()">Cuadro4</button>
+			<button type="button" id="sp5" onclick="funcBut5()">Cuadro5</button>
+
+			<button type="button" id="Rescle" onclick="ResetCan()">Resetear</button>
+
+ 		<script type="text/javascript">
+
+
+	var canvas = document.getElementById('tutorial');
+	var ctx = canvas.getContext('2d');
+
+function funcBut1(){
+	ctx.fillStyle = 'pink';
+	ctx.fillRect(30, 40, 200, 200); // rectangulo 
+	ctx.strokeRect(30, 40, 200, 200);
+}
+
+function funcBut2(){
+	// borde rectangular 
+	ctx.fillStyle = 'lightblue';
+	ctx.fillRect(50, 60, 200, 200);
+	ctx.strokeRect(50, 60, 200, 200); 
+}
+
+function funcBut3(){
+	ctx.fillStyle = 'lightgreen';
+	ctx.fillRect(70, 80, 200, 200);
+	ctx.strokeRect(70, 80, 200, 200); 
+}
+
+function funcBut4(){
+	ctx.fillStyle = '#FDDE6CFF';
+	ctx.fillRect(90, 100, 200, 200);
+	ctx.strokeRect(90, 100, 200, 200); 
+}
+
+function funcBut5(){
+	ctx.fillStyle = '#F975DCFF';
+	ctx.fillRect(110, 120, 200, 200);
+	ctx.strokeRect(110, 120, 200, 200);
+}
+
+
+
+	function ResetCan(){
+	return	document.location.reload();
+	}
+	// parte transparente
+	// clearRect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
