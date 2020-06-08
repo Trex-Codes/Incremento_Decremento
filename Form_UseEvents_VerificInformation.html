@@ -1,0 +1,349 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="author" content="Trex_Codes">
+	<meta name="description" content="structure Menu">
+	<meta name="keywords" content="Trex_Codes, GitHub, Menu">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style type="text/css">
+
+		body{
+	margin: 10px;
+	border: 2px solid black;
+	background-color: #E8E8E8FF;
+}
+
+#h1Tit{
+	text-align: center;
+	font-family: fantasy;
+	font-size: 50px;
+	color: black;
+}
+
+#h1Tit:hover{
+	font-family: fantasy;
+	color: blue;
+	font-weight: bold;
+	padding: 15px;
+}
+
+#nav_menu{
+	background-color: lightblue;
+	width: 1010px;
+	height: 50px;
+}
+
+#btnMenu1:hover{
+	background-color: #A0DE1BFF;
+}
+
+#btnMenu2:hover{
+	background-color: #D354A8FF;
+}
+
+#btnMenu3:hover{
+	background-color: #00FF9080;
+}
+
+#btnMenu4:hover{
+	background-color: #F3CB01FF;
+}
+
+a.btn_Menu{
+	margin-left: 120px;
+	position: relative;
+	top: 15px;
+	text-decoration: none;
+	font-family: inherit;
+	font-weight: bold;
+	color: black;
+	padding: 15px;
+	border:2px solid black;
+}
+
+#table_1{
+	margin: 50px 50px;
+	border: 1px solid black;
+}
+
+#table_1 tr td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	height: 120px;
+	width: 475px;
+}
+
+/*-----------------------------------------------------*/
+
+textarea{
+	margin: 10px;
+	width: 430px;
+	height: 150px;
+}
+
+th{
+	font-weight: bold;
+}
+
+/*-----------------------------------------------------*/
+
+form{
+	position: relative;
+	margin: 10px;
+}
+
+#Code_Form{
+	width: 100px;
+}
+
+#btnVERIF{
+	visibility: hidden;
+	display: none;
+}
+
+
+#btnVERIF2{
+	visibility: hidden;
+	display: none;
+}
+
+
+#btnVERIF3{
+	visibility: hidden;
+	display: none;
+}
+
+#btnInvoc{
+	margin: -30px 10px 10px;
+}
+
+	</style>
+</head>
+	<body>
+			<header>
+			<h1 id="h1Tit">MENU OPTIONAL</h1>
+
+			<nav id="nav_menu">
+				<a class="btn_Menu" id="btnMenu1" href="#">sout1</a>
+				<a class="btn_Menu" id="btnMenu2" href="#">sout2</a>
+				<a class="btn_Menu" id="btnMenu3" href="#">sout3</a>
+				<a class="btn_Menu" id="btnMenu4" href="#">sout4</a>
+			</nav>
+		</header>
+
+		<section>
+			<article>
+				<table id="table_1">	
+					<tr>
+						<th>Stolem1</th>
+						<th>Stolem2</th>
+					</tr>
+					<tr>
+						<td>
+							<textarea id="textarea1"></textarea>
+							<p id="Info1"></p>
+							<p id="Info2"></p>
+							<p id="Info3"></p>
+						</td>
+						<td>
+							<form action="">
+								<label>User: </label><br>
+									<input type="text" name="form1_US" placeholder="Nickname" id="userForm" required><br><br>
+								<label> Password:</label><br>
+									<input type="password" name="form1_PASS" placeholder="password" id="PasswordForm" required><br><br>
+								<label> Seleccione una:</label><br>
+									<select id="SelectForm" name="ValoresX">
+										<option id="Option1" value="1">1</option>
+										<option id="Option2" value="2">2</option>
+										<option id="Option3" value="3">3</option>
+										<option id="Option4" value="4">4</option>
+										<option id="Option5" value="5">5</option>
+									</select>
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea id="textarea2"></textarea>
+							<p id="Info4"></p>
+							<p id="Info5"></p>
+							<p id="Info6"></p>
+							<p id="Info7"></p>
+							<p id="Info8"></p>
+							<p id="Info9"></p>
+						</td>
+						<td>
+							<form action="">
+								<label>Escoge un color: </label><br>
+									<input  type="color" name="color_Form" id="Colorform" required><br><br>
+									<label>Codigo de registro</label><br>
+										<input type="number" id="BTN_form2" type="submit" name="btnSub2" placeholder="Code" min="0" max="50" required><br><br>
+									<label>Escoga uno:</label>
+										<input type="radio" id="BTN_rad1" type="submit" name="btnSub1" required>H
+										<input type="radio" id="BTN_rad2" type="submit" name="btnSub1" required>M<br>
+										<label>Checkbox1</label>
+											<input id="Check1" type="checkbox" name="chech1" required><br>
+										<label>Checkbox2</label>
+											<input id="Check2" type="checkbox" name="chech2" required><br><br>
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea id="textarea3"></textarea>
+							<p id="Info10"></p>
+							<p id="Info11"></p>
+							<p id="Info12"></p>
+						</td>
+						<td>
+							<form action="">
+								<label>Digite su codigo(#)</label><br>
+									<input id="Code_Form" type="number" min="0" max="10" placeholder="numeros" required><br><br>
+								<label> DIgite su identificacion</label><br>
+									<input id="IdForm" type="number" min="0" max="11111111" placeholder="numeros"required><br><br>
+								<label>Digite su coreo Electronico</label>
+									<input id="EMailForm" type="email" placeholder="Email" name="Email_Form" required><br><br>
+						</td>
+					</tr>
+				</table>
+			</article>
+		</section>
+		<footer>
+			<button type="button" id="btnInvoc" onclick="ChooseForm()">VERIFICAR DATOS</button>
+			<button type="button" id="resetALl" onclick="ResetPAGE()">VALORES INICIALES</button>
+		</footer>
+		<script type="text/javascript">
+			
+		// Nav buttons options menu
+var navMEnu = document.getElementById('nav_menu');
+
+// buttons header
+var Headbtn1 = document.getElementById('btnMenu1');
+document.getElementById('btnMenu1').onclick = function(){
+	document.body.style.backgroundColor = '#A0DE1BFF';
+	navMEnu.style.backgroundColor = '#A0DE1BFF';
+}
+var Headbtn2 = document.getElementById('btnMenu2');
+document.getElementById('btnMenu2').onclick = function(){
+	document.body.style.backgroundColor = '#D354A8FF';
+	navMEnu.style.backgroundColor = '#D354A8FF';
+}
+var Headbtn3 = document.getElementById('btnMenu3');
+document.getElementById('btnMenu3').onclick = function(){
+	document.body.style.backgroundColor = '#00FF9080';
+	navMEnu.style.backgroundColor = '#00FF9080';
+}
+var Headbtn4 = document.getElementById('btnMenu4');
+document.getElementById('btnMenu4').onclick = function(){
+	document.body.style.backgroundColor = '#F3CB01FF';
+	navMEnu.style.backgroundColor = '#F3CB01FF';
+}
+
+
+function ChooseForm(){
+	var chooseForm = prompt('Escoge un form');
+	if (chooseForm == 1) {
+		funcverif();
+	}else if (chooseForm == 2) {
+		funcverif2();
+	}else {
+		funcverif3();
+	}
+}
+
+
+
+
+// ---------------------------------------
+
+function funcverif(){
+	// Call forms text 
+	var form1Text = document.getElementById('userForm').value;
+	var form2Text = document.getElementById('PasswordForm').value;
+	var form3List = document.getElementById('SelectForm').value; // list form
+	console.log(form3List);
+
+	// <p> para cada valor forms
+	var p1 = document.getElementById('Info1');
+		p1.style.backgroundColor = 'yellow';
+	var p2 = document.getElementById('Info2');
+		p2.style.backgroundColor = 'yellow';
+	var p3 = document.getElementById('Info3');
+		p3.style.backgroundColor = 'yellow';
+
+	// Change info to form > textarea
+	p1.innerText = 'Valor form1: ' + form1Text;
+	p2.innerText = 'Valor form2: ' + form2Text;
+	p3.innerText = 'Valor form3: ' + form3List;
+}
+
+function funcverif2(){
+	// Call forms
+	var ColorFormCall = document.getElementById('Colorform').value; //formColor call 
+	var CodeForm = document.getElementById('BTN_form2').value;
+
+	// <p> para cada valor forms
+	var p4 = document.getElementById('Info4');
+		p4.style.backgroundColor = 'yellow';
+	var p5 = document.getElementById('Info5');
+		p5.style.backgroundColor = 'yellow';
+	
+	
+
+	p4.innerText = 'Valor form1: ' + ColorFormCall;
+	p5.innerText = 'Valor form2: ' + CodeForm;
+	
+	// forms Radio 
+	var callRad1 = document.getElementById('BTN_rad1');
+
+if (document.getElementById('BTN_rad1').checked == true) {
+		var p6 = document.getElementById('Info6');
+		p6.style.backgroundColor = 'yellow';
+		p6.innerText = 'Check1 CHECK';  
+	} else {
+		var p7 = document.getElementById('Info7');
+		p7.style.backgroundColor = 'yellow';
+		p7.innerText = 'check1 UNCKEKED';
+	}
+
+
+if (document.getElementById('BTN_rad2').checked == true) {
+		var p8 = document.getElementById('Info8');
+		p8.style.backgroundColor = 'yellow';
+		p8.innerText = 'Check2 CHECK'; 
+	} else {
+		var p9 = document.getElementById('Info9');
+		p9.style.backgroundColor = 'yellow';
+		p9.innerText = 'Check2 UNCKEKED'; 
+	}
+}
+
+	function funcverif3() {
+		// call forms
+		var codeFormCall = document.getElementById('Code_Form').value;
+		var IDformCall = document.getElementById('IdForm').value;
+		var EmailForm = document.getElementById('EMailForm').value;
+
+		// <p> para cada valor forms
+	var p10 = document.getElementById('Info10');
+		p10.style.backgroundColor = 'yellow';
+	var p11 = document.getElementById('Info11');
+		p11.style.backgroundColor = 'yellow';
+	var p12 = document.getElementById('Info12');
+		p12.style.backgroundColor = 'yellow';
+		
+		p10.innerText = 'Valor form1: ' + codeFormCall;
+		p11.innerText = 'Valor form2: ' + IDformCall;
+		p12.innerText = 'Valor form3: ' + EmailForm;
+	}
+
+// VALORES (BACKGROUND FOR BTNS)
+function ResetPAGE(){
+	document.body.style.backgroundColor = 'initial';
+	var navMEnu2 = document.getElementById('nav_menu').style.backgroundColor = 'lightblue';
+}
+
+		</script>
+	</body>
+</html>
