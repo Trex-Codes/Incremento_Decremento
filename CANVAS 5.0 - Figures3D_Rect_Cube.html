@@ -1,0 +1,104 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="CanvSect1" width="900" height="900"></canvas>
+	<script type="text/javascript">
+
+var canvas  = document.getElementById('CanvSect1');
+var ctx = canvas.getContext('2d');
+
+
+// cuadro 1
+ctx.beginPath();
+ctx.fillStyle = 'lightgreen';
+ctx.fillRect(60, 10, 180, 100);
+ctx.strokeRect(60, 10, 180, 100);
+ctx.closePath();
+
+// ----------------------------------------
+
+// cuadro atras
+ctx.beginPath();
+ctx.fillStyle = 'gold';
+ctx.strokeRect(100, 20, 100, 80);
+ctx.fillRect(100, 20, 100, 80);
+ctx.closePath();
+
+	// linea conector superior izquierda
+	ctx.beginPath();
+	ctx.moveTo(60, 10);
+	ctx.lineTo(100, 20)
+	ctx.stroke();
+	ctx.closePath();
+
+	// linea conector superior derecha
+	ctx.beginPath();
+	ctx.moveTo(240, 10);
+	ctx.lineTo(200, 20);
+	ctx.stroke();
+	ctx.closePath();
+
+		// inea conector inferior izquierda
+		ctx.beginPath();
+		ctx.moveTo(60, 110);
+		ctx.lineTo(100, 100);
+		ctx.stroke();
+		ctx.closePath();
+
+		// linea conector inferior derecha
+		ctx.beginPath();
+		ctx.moveTo(240, 110);
+		ctx.lineTo(200, 100);
+		ctx.stroke();
+		ctx.closePath();
+
+
+var canvas  = document.getElementById('CanvSect1');
+var ctx = canvas.getContext('2d');
+
+// cuadro 1
+ctx.beginPath();
+ctx.fillStyle = 'lightblue';
+ctx.strokeRect(340, 10, 180, 50);
+ctx.fillRect(340, 10, 180, 50);
+ctx.closePath();
+
+	// lineas-cuadro1
+	ctx.beginPath();
+	ctx.moveTo(120, 10);
+	ctx.lineTo(120, 35);
+	ctx.lineTo(180, 35);
+	ctx.lineTo(180, 10);
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+
+// cuadro 2
+ctx.beginPath();
+ctx.fillStyle = 'lightgreen';
+ctx.strokeRect(340, 60, 180, 50);
+ctx.fillRect(340, 60, 180, 50);
+ctx.closePath();
+
+	// subCuadro1 cuadro2
+	ctx.beginPath();
+	ctx.fillStyle = 'pink';
+	ctx.strokeRect(340, 90, 60, 20);
+	ctx.fillRect(340, 90, 60, 20);
+	ctx.closePath();
+
+	// subCuadro2 cuadro2
+	ctx.beginPath();
+	ctx.fillStyle = 'pink';
+	ctx.strokeRect(460, 90, 60, 20);
+	ctx.fillRect(460, 90, 60, 20);
+	ctx.closePath();
+
+
+	
+	</script>
+</body>
+</html>
