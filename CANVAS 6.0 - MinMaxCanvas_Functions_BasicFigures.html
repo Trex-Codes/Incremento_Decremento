@@ -1,0 +1,182 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CANVAS HORIZONTAL</title>
+	<style type="text/css">
+		
+		*{
+		margin: 0px; 
+		overflow: hidden;
+		padding: 0px none;
+	}	
+
+	#canvas{
+		background-image: url(canvas.jpg);
+	}		
+
+	#contenedor{
+		background-color: red;
+		width: 2000px;
+		height: 650px;
+		margin: 5vh auto;
+	}
+	
+	#btnAmpliar{
+		display: block;
+		position: absolute;
+		padding: 10px;
+		cursor: pointer;
+	}
+
+
+
+@media (orientation: portrait){
+
+		#contenedor{
+			display: none;
+		}
+
+
+		#HORIZONTAL{
+			background-image: url("https://www.motive.it/images/rotate.gif");
+			background-size: cover;
+			width: 100%;
+			height: 60vh;
+			position:absolute;
+		}
+/*
+		#title_horiz{
+			text-align: center;
+			font-size: 50px;
+			font-family: sans-serif;
+			margin: 50vh auto;
+		}*/
+			
+	}
+
+	</style>
+</head>
+<body style="background-color: lightgreen;"> 
+
+	<div id="HORIZONTAL"><!-- <h1 id="title_horiz">PONER DISPOSITIVO EN POSICION HORIZONTAL</h1> --></div>
+
+	<div id="contenedor">
+
+	<canvas id="canvas" width="2000px" height="650px"></canvas>
+
+	<button id="btnAmpliar" onclick="ampliar()">Ampliar</button>
+
+	</div>
+
+
+	<script type="text/javascript">
+			
+			var canvas = document.querySelector("#canvas");
+var ctx = canvas.getContext("2d");
+// console.log("ctx", ctx);
+
+// El metodo HTMLCanvasElement.getContext(); retorna un contexto de dibujo en el lienzo, o null si el identificador del contexto no esta soportado.
+
+/***************************************************
+CUADROS
+***************************************************/
+
+// RELLENO
+ctx.fillStyle = 'cyan';
+// ctx.fillRect(x1,y1,x2,y2); posicionx-posiciony-ancho-altura
+ctx.fillRect(10,10,500,100);
+
+// CONTORNO
+ctx.lineWidth = 5; // grosor
+ctx.strokeStyle = "rgba(255,0,255,1)";
+ctx.rect(10,10,500,100);
+ctx.stroke();
+
+/***************************************************
+CIRCULOS
+***************************************************/
+
+ctx.beginPath(); //  inicio del camino
+
+// ctx.arc(x1, y1, r, startAngle, endAngle); posicionx-posiciony-radio-inicio del angulo-final del angulo
+ctx.arc(120,120,80,0,2*Math.PI);
+
+// RELLENo
+ctx.fillStyle = 'green';
+ctx.fill();
+
+//CONTORNO
+ctx.lineWidth = 5; // grosor
+ctx.strokeStyle = "blue";
+ctx.stroke();
+
+/***************************************************
+LINEAS
+***************************************************/
+
+ctx.beginPath();
+
+// ctx.moveTo(x1,y1) inicio del camino ejex - ejey
+ctx.moveTo(0,0);
+
+// ctx.lineTo(x2,y2) hasta donde llega ejex - ejey
+ctx.lineTo(200,200);
+ctx.lineTo(400,200);
+ctx.lineTo(600,400);
+ctx.lineTo(800,200);
+ctx.lineTo(1000,200);
+ctx.lineTo(1000,0);
+
+// Contorno Linea
+ctx.lineWidth = 5;
+ctx.stroke();
+
+// Relleno linea
+ctx.fillStyle = 'rgba(0,0,255,.6)';
+ctx.fill();
+
+var contenedor = document.querySelector("#contenedor");
+var ampliarCanva = document.querySelector("#canvas");
+var btnAmpliar = document.querySelector("#btnAmpliar");
+
+function ampliar(){
+	contenedor.style.width = '300px';
+	contenedor.style.height = '300px';
+	contenedor.style.margin = '10vh';
+
+	// ampliarCanva.style.width = '100%';
+	// ampliarCanva.style.height = '100vh';
+	// ampliarCanva.style.backgroundSize = 'cover';
+	// ampliarCanva.style.backgroundRepeat = 'no-repeat';
+
+	btnAmpliar.innerHTML = "Reducir";
+	btnAmpliar.style.position = 'fixed';
+	btnAmpliar.style.top = '10px';
+	btnAmpliar.style.left = '10px';
+	btnAmpliar.style.zIndex = '1';
+
+	btnAmpliar.setAttribute("onclick","Reducir()");
+
+}
+
+function Reducir(){
+	contenedor.style.width = '650px';
+	contenedor.style.height = '650px';
+	contenedor.style.margin = '5vh auto';
+
+	// ampliarCanva.style.width = '650px';
+	// ampliarCanva.style.height = '650px';
+
+	btnAmpliar.innerHTML = "Ampliar";
+	btnAmpliar.style.position = 'absolute';
+	btnAmpliar.style.top = '0';
+	btnAmpliar.style.left = '0';
+	btnAmpliar.style.zIndex = '0';
+
+	btnAmpliar.setAttribute("onclick","ampliar()");
+
+}
+
+	</script>
+</body>
+</html>
