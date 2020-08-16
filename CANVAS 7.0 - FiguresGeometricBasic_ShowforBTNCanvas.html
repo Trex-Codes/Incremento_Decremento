@@ -1,0 +1,224 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Geometric Figures</title>
+	<style type="text/css">
+
+		button{
+			float: left;
+			padding: 5px;
+			margin: 10px;
+			border: 1px solid black;
+		}
+		
+		h1{
+			font-size: 40px;
+			font-family: sans-serif;
+		}
+
+		#squa:hover{
+			background-color: #80D279FF;
+			/*background-color: red;*/
+		}
+
+		#Figure_Rect:hover{
+			background-color: #C3A7DCFF
+			/*background-color: red;*/
+		}
+
+		#Figure_TrianIso:hover{
+			background-color: #88F2F6FF;
+			/*background-color: red;*/
+		}
+
+		#Figure_TrianRect:hover{
+			background-color: #EEE59FFF;
+			/*background-color: red;*/
+		}
+
+		#Figure_Cir:hover{
+			background-color: #70B4EFFF;
+			/*background-color: red;*/
+		}
+
+		#Figure_Cube:hover{
+			background-color: #A874F5FF;
+			/*background-color: red;*/
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Geometric figures</h1>	
+
+	<canvas style="background-color: #C4C4C4FF; border: 1px solid black" id="canvasGEO" width="980" height="650"></canvas>
+	
+	<button id="Squa" onclick="Squa_Show()">square</button>
+	<button id="Figure_Rect" onclick="Figure_Rect_Show()">rectangle</button>
+	<button id="Figure_TrianIso" onclick="Figure_TrianIso_Show()">triangle <br> Isosceles</button>
+	<button id="Figure_TrianRect" onclick="Figure_TrianRect_Show()">triangle <br> rectangle</button>
+	<button id="Figure_Cir" onclick="Figure_Cir_Show()">Circle</button>
+	<button id="Figure_Cube" onclick="Figure_Cube_Show()">Cube</button>
+
+	<script type="text/javascript">
+
+		function Squa_Show(){
+
+		var Domstyle = document.getElementById('Squa');
+		var elementStyle_Domstyle = window.getComputedStyle(Domstyle);
+		var element_color = elementStyle_Domstyle.getPropertyValue('background-color');
+		console.log("Cuadro: " + element_color);
+
+		var canvas = document.getElementById('canvasGEO');
+		var ctx = canvas.getContext("2d");
+
+		// CUADRADO 
+		ctx.beginPath();
+		ctx.rect(400, 85, 100, 100);
+		ctx.fillStyle = element_color;
+		ctx.fill();
+		ctx.stroke();
+		ctx.closePath();
+	}
+			function Figure_Rect_Show(){
+
+			// Llamar propiedad CSS de rect
+			var Domstyle2 = document.getElementById('Figure_Rect');
+			var elementStyle_Domstyle2 = window.getComputedStyle(Domstyle2);
+			var element_color2 = elementStyle_Domstyle2.getPropertyValue('background-color');
+			console.log("Rectangulo: " + element_color2);
+
+			var canvas = document.getElementById('canvasGEO');
+			var ctx = canvas.getContext("2d");
+
+			// RECTANGULO 
+			ctx.beginPath();
+			ctx.rect(400, 225, 200, 100);
+			ctx.fillStyle = element_color2;
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+		}
+				function Figure_TrianIso_Show(){
+
+				// Llamar propiedad CSS de Triangulo Isosceles
+				var Domstyle3 = document.getElementById('Figure_TrianIso');
+				var elementStyle_Domstyle3 = window.getComputedStyle(Domstyle3);
+				var element_color3 = elementStyle_Domstyle3.getPropertyValue('background-color');
+				console.log('Triangulo Isosceles: ' + element_color3);
+
+				var canvas = document.getElementById('canvasGEO');
+				var ctx = canvas.getContext("2d");
+
+				// TRIANGULO ISOSCELES
+				ctx.beginPath();
+				ctx.moveTo(95, 320);
+				ctx.lineTo(225, 320);
+				ctx.lineTo(160, 185);
+				ctx.lineTo(95, 320);
+				ctx.fillStyle = element_color3;
+				ctx.fill();
+				ctx.stroke();
+				ctx.closePath();
+			}
+					function Figure_TrianRect_Show(){
+
+					// Llamar propiedad CSS de Triangulo Rectangulo
+					var Domstyle4 = document.getElementById('Figure_TrianRect');
+					var elementStyle_Domstyle4 = window.getComputedStyle(Domstyle4);
+					var element_color4 = elementStyle_Domstyle4.getPropertyValue('background-color');
+					console.log('Triangulo Rectangulo: ' + element_color4);
+
+					var canvas = document.getElementById('canvasGEO');
+					var ctx = canvas.getContext("2d");
+
+					//TRIANGULO RECTANGULO 
+					ctx.beginPath();
+					ctx.moveTo(95, 420);
+					ctx.lineTo(95, 530);
+					ctx.lineTo(320, 530);
+					ctx.lineTo(95, 420);
+					ctx.fillStyle = element_color4;
+					ctx.fill();
+					ctx.stroke();
+					ctx.closePath();
+				}
+						function Figure_Cir_Show(){
+
+						// Llamar propiedad CSS de Circulo
+						var Domstyle5 = document.getElementById('Figure_Cir');
+						var elementStyle_Domstyle5 = window.getComputedStyle(Domstyle5);
+						var element_color5 = elementStyle_Domstyle5.getPropertyValue('background-color');
+						console.log('Circulo: ' + element_color5);
+
+						var canvas = document.getElementById('canvasGEO');
+						var ctx = canvas.getContext("2d");
+
+						// CIRCULO
+						ctx.beginPath();
+						ctx.arc(450, 460, 60, 0, Math.PI/180*360);
+						ctx.fillStyle = element_color5;
+						ctx.fill();
+						ctx.stroke();
+						ctx.closePath();
+					}
+							function Figure_Cube_Show(){
+
+							// Llamar propiedad CSS de Cubo
+							var Domstyle6 = document.getElementById('Figure_Cube');
+							var elementStyle_Domstyle6 = window.getComputedStyle(Domstyle6, );
+							var element_color6 = elementStyle_Domstyle6.getPropertyValue('background-color');
+							console.log('Cubo: ' + element_color6);
+							
+							var canvas = document.getElementById('canvasGEO');
+							var ctx = canvas.getContext("2d");
+
+							// CUBO
+							ctx.beginPath();
+							ctx.moveTo(150, 100);
+							ctx.lineTo(150, 145);
+							ctx.fillStyle = element_color6;
+							ctx.fill();
+							ctx.stroke();
+							ctx.closePath();
+
+							ctx.beginPath();
+							ctx.moveTo(150, 145); 
+							ctx.lineTo(220, 100);
+							ctx.lineTo(220, 55);
+							ctx.lineTo(150, 100); 
+							ctx.fillStyle = element_color6;
+							ctx.fill();
+							ctx.stroke();
+							ctx.closePath();
+
+							ctx.beginPath();
+							ctx.moveTo(150, 145); 
+							ctx.lineTo(50, 100);
+							ctx.lineTo(50, 60); 
+							ctx.lineTo(150, 100); 
+							ctx.fillStyle = element_color6;
+							ctx.fill();
+							ctx.stroke();
+							ctx.closePath();	
+
+							ctx.beginPath();
+							ctx.moveTo(220, 55); 
+							ctx.lineTo(120, 20); 
+							ctx.fillStyle = element_color6;
+							ctx.fill();
+							ctx.stroke();
+							ctx.closePath();
+
+							ctx.beginPath();
+							ctx.lineTo(120, 20);
+							ctx.lineTo(50, 60); 
+							ctx.fillStyle = element_color6;
+							ctx.fill();
+							ctx.stroke();
+							ctx.closePath();
+						}
+	</script>
+</body>
+</html>	
