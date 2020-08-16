@@ -7,9 +7,10 @@ _Its main use is to document the topics learned during the study of developed pr
 
 ## Deployment 📦
 _Multi-personal projects available based on `HTML-CSS-JS` languages_:
+- 0.1 index
 - 1.0 Forms $3names and calls with 'Hi! + $'.html
-- 10.0 Forms Get values with HTML-JS.html
-- 11.0 stack Table create with forms values.html
+- 0.2 Index Table(multiplicaction,Add,Power)
+- 1.0 Forms $3names and calls with 'Hi! + $'
 - 2.0 Buttons change Color with Prompt.html
 - 3.0 Checkbox verify (true-false) and form nums(1-100).html
 - 4.0 Change backgroundColor Text with buttons (mark Tag HTML5).html
@@ -18,18 +19,27 @@ _Multi-personal projects available based on `HTML-CSS-JS` languages_:
 - 7.0 Table calculate total purchase amount (FOOD JS).html
 - 8.0 html structure DOM (all JS CODE).html
 - 9.0 API Location latitude-Longitude.html
+- 10.0 Forms Get values with HTML-JS.html
+- 11.0 stack Table create with forms values.html
 - app_multiplicacion_datos.js
 - arrays.js
 - base_de_datos.js
 - bucle_name_contador.js
+- CANVAS 1.0 - Canvas_CaraGeometrica-cruz
+- CANVAS 2.0 - FigurasGeometricasBasic
+- CANVAS 3.0 - CuadrosReset_OnclickEvents
+- CANVAS 4.0 - Figuras_3D_BasicGrade
+- CANVAS 5.0 - Figures3D_Rect_Cube
+- CANVAS 6.0 - MinMaxCanvas_Functions_BasicFigures
+- CANVAS 7.0 - FiguresGeometricBasic_ShowforBTNCanvas
 - catups_content_arrays.js
 - Constructor_functions_objects.js
 - Create Divs with prompt on position Y.html
+- create_web_site_DOM_nodos.js
 - DATASET 1.0 - Changes values about DATASET.html
 - DATASET 2.0 - Set onclick events open console DATASET info.html
 - DATASET 3.0 - change  values with Prompt.html
 - DATASET 4.0 - CHARGE INFORM ABOUT PROGRAMERS WITH LINKS.html
-- create_web_site_DOM_nodos.js
 - double_por_2-escala_nota-Promedio_nota-Area_triangulo.html
 - encuest_user-sum_datos-conversiones.html
 - event_Extern__.js
@@ -39,6 +49,7 @@ _Multi-personal projects available based on `HTML-CSS-JS` languages_:
 - function_loop.js
 - function_temperaturas_convertidor.js
 - functions_parameters.js
+- Geolocalizacion_Nav
 - incremento_descremento.html
 - incremento_descremento1
 - incremento_descremento2
