@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Version circles Vision</title>
+</head>
+<body>
+	<canvas style="width: 2500; height: 2500; background-color: lightblue" id="Canvas"></canvas>	
+
+	<script type="text/javascript">
+		
+		canvas = document.getElementById('Canvas');
+		ctx = canvas.getContext("2d");
+
+		// Ojo 1
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(75, 65, 45, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "black";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(90, 65, 25, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 5;
+		ctx.strokeStyle = "lightblue";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(105, 65, 10, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 5;
+		ctx.strokeStyle = "lightblue";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "white";
+		ctx.arc(107, 65, 5, 0, (Math.PI/180)*360, true);
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+// --------------------------------------------------------------------
+
+		// ojo 2
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(220, 65, 45, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = "black";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(205, 65, 25, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 5;
+		ctx.strokeStyle = "lightblue";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "black";
+		ctx.arc(190, 65, 10, 0, (Math.PI/180)*360, true);
+		ctx.lineWidth = 5;
+		ctx.strokeStyle = "lightblue";
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle = "white";
+		ctx.arc(185, 65, 5, 0, (Math.PI/180)*360, true);
+		ctx.stroke();
+		ctx.fill();
+		ctx.closePath();
+
+// 	--------------------------------------------------------------------
+
+	// Pico 
+	ctx.beginPath();
+	ctx.strokeStyle = "black";
+	ctx.fillStyle = "#E59DAAFF";
+	ctx.lineWidth = 1;
+	ctx.moveTo(120, 115);
+	ctx.lineTo(175, 115);
+	ctx.lineTo(147, 135);
+	ctx.lineTo(120, 115);
+	ctx.lineTo(147, 95);
+	ctx.lineTo(175, 115);
+	ctx.stroke();
+	ctx.fill();
+	ctx.closePath();
+
+	// cara (derecha)
+	ctx.beginPath();
+	ctx.arc(219, 61, 70, (Math.PI/180)*35, (Math.PI/180)*130, false);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.arc(222, 65, 65, (Math.PI/180)*35, (Math.PI/180)*150, true);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.arc(78, 65, 65, (Math.PI/180)*50, (Math.PI/180)*195);
+	ctx.stroke();
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.arc(78, 65, 65, (Math.PI/180)*30, (Math.PI/180)*185, true);
+	ctx.stroke();
+	ctx.closePath();
+
+	// nariz final 
+	// ctx.beginPath();
+	// ctx.moveTo(142, 58);
+	// ctx.lineTo(158, 58);
+	// ctx.strokeStyle = "black";
+	// ctx.lineWidth = 1;
+	// ctx.stroke();
+	// ctx.closePath();
+
+	</script>
+</body>
+</html>
