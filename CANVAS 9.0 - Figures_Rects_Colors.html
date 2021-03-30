@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Figure Rects Colors</title>
+	<style type="text/css">
+		body{
+			background-color: #F3AFB3FF;
+		}
+
+		button{
+			margin-top: 10;
+		}
+
+		.bt_1{
+			margin-left: 300;
+		}
+
+
+	</style>
+</head>
+<body>
+	<canvas style= "border: 1px solid black; margin-left: 300" id="canvasGEO" width="1000" height="500"></canvas><br>
+
+	<button class="bt_1" type="submit" id="RectGold" onclick="funcGold()">Cuadro Gold</button>
+	<button class="bt_2" type="submit" id="RectPurple" onclick="funcPurple()">Cuadro Purple</button>
+	<button class="bt_3" type="submit" id="RectLightBlue" onclick="funcLightBlue()">Cuadro Lightblue</button>
+	<button class="bt_4" type="submit" id="RectOrange" onclick="funcOrange()">Cuadro Orange</button>
+	
+
+	<script type="text/javascript">
+
+		function funcGold() {
+
+			for ( var a=0; a <= 8; a++){
+				var ejesxy= a*50;
+
+				var canvas = document.getElementById('canvasGEO');
+				var ctx = canvas.getContext("2d");
+
+				ctx.beginPath();
+				ctx.fillStyle = "gold";
+				ctx.rect(ejesxy, ejesxy, 25, 25);
+				ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+		}
+	}
+
+		function funcPurple() {
+
+			for (i = 9; i <= 19; i++) { 
+    			var ejeX = 50*i;
+
+    			var canvas = document.getElementById('canvasGEO');
+				var ctx = canvas.getContext("2d");
+
+				ctx.beginPath();
+				ctx.fillStyle = "purple";
+				ctx.rect(ejeX, 450, 25, 25);
+				ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+    		}
+    	}
+
+    	function funcLightBlue() {
+
+    		for (j = 8; j >= 1; j--) {
+    			var ejeY = 50*j;
+
+    			var canvas = document.getElementById('canvasGEO');
+				var ctx = canvas.getContext("2d");
+
+				ctx.beginPath();
+				ctx.fillStyle = "lightblue";
+				ctx.rect(950, ejeY, 25, 25);
+				ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+    		}
+    	}
+
+    		function funcOrange() {
+
+    		for ( var a = 19; a >= 1; a--) {
+				var ejex2 = (a*50);
+
+				var canvas = document.getElementById('canvasGEO');
+				var ctx = canvas.getContext("2d");
+
+				ctx.beginPath();
+				ctx.fillStyle = "orange";
+				ctx.rect(ejex2, 0, 25, 25);
+				ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+			}
+		}
+		
+
+	</script>
+</body>
+</html>
