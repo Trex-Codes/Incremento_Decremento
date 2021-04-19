@@ -1,5 +1,5 @@
-# 0.6-incremento_decremento
-# Incremento_Descremento (Mini proyects HTML-CSS-JS-PHP-PYTHON)
+# Incremento_decremento
+# Mini proyects HTML-CSS-JS-PHP-PYTHON
 
 ## Starting 🚀
 _This documentation contains the repository practice [**0.5-Documentation FULLSTACK**](https://github.com/juan1305/0.8-Documentation-_FULLSTACK)_
